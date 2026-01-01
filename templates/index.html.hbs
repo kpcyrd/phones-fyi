@@ -1,0 +1,192 @@
+{{#*inline "page"}}
+<section class="search-filter">
+    <div class="filter-grid">
+        <div class="filter-group">
+            <label for="search">Search</label>
+            <input type="text" id="search" placeholder="Device name or codename...">
+        </div>
+        <div class="filter-group">
+            <label for="vendor">Vendor</label>
+            <select id="vendor">
+                <option value="">All Vendors</option>
+                {{#each vendors}}
+                <option value="{{@key}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+</section>
+
+<section id="comparison" class="comparison-table">
+    <table>
+        <thead>
+            <tr>
+                <th>Device</th>
+                <th><span class="tooltip" data-tooltip="Still receiving security updates">Security Support</span></th>
+                <th><span class="tooltip" data-tooltip="Verified Boot ensures system integrity">Secure Boot</span></th>
+                <th><span class="tooltip" data-tooltip="Trusted Execution Environment">TEE</span></th>
+                <th><span class="tooltip" data-tooltip="Hardware-backed keystore">HW Keystore</span></th>
+                <th><span class="tooltip" data-tooltip="Hardware security module">HSM</span></th>
+                <th><span class="tooltip" data-tooltip="Rollback protection">Rollback Prot.</span></th>
+                <th><span class="tooltip" data-tooltip="Bootloader unlock support">Unlockable</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="device-info">
+                        <div>
+                            <div class="device-name">Google Pixel 8 Pro</div>
+                            <div class="device-codename">husky</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-yes">✓ Trusty</span></td>
+                <td><span class="badge badge-yes">✓ Titan M2</span></td>
+                <td><span class="badge badge-yes">✓ Titan M2</span></td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+            </tr>
+            {{#each devices}}
+            <tr data-vendor="{{this.vendor_id}}">
+                <td>
+                    <div class="device-info">
+                        <div>
+                            <div class="device-name">{{lookup (lookup ../vendors this.vendor_id) "name" }} {{this.name}}
+                            </div>
+                            <div class="device-codename">{{this.codename}}</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-partial">⚠ Unknown</span></td>
+                <td><span class="badge badge-partial">⚠ Unknown</span></td>
+                <td><span class="badge badge-partial">⚠ Unknown</span></td>
+                <td><span class="badge badge-partial">⚠ Unknown</span></td>
+                <td><span class="badge badge-partial">⚠ Unknown</span></td>
+                <td><span class="badge badge-partial">⚠ Unknown</span></td>
+            </tr>
+            {{/each}}
+            <tr>
+                <td>
+                    <div class="device-info">
+                        <div>
+                            <div class="device-name">Apple iPhone 15 Pro</div>
+                            <div class="device-codename">d83ap</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-yes">✓ SEP</span></td>
+                <td><span class="badge badge-yes">✓ Secure Enclave</span></td>
+                <td><span class="badge badge-yes">✓ Secure Enclave</span></td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-no">✗ No</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="device-info">
+                        <div>
+                            <div class="device-name">Fairphone 5</div>
+                            <div class="device-codename">FP5</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-yes">✓ QTEE</span></td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-no">✗ No</span></td>
+                <td><span class="badge badge-partial">⚠ Partial</span></td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="device-info">
+                        <div>
+                            <div class="device-name">OnePlus 12</div>
+                            <div class="device-codename">pineapple</div>
+                        </div>
+                    </div>
+                </td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-yes">✓ QTEE</span></td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+                <td><span class="badge badge-no">✗ No</span></td>
+                <td><span class="badge badge-partial">⚠ Partial</span></td>
+                <td><span class="badge badge-yes">✓ Yes</span></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="about" class="info-section">
+    <h2>Understanding Hardware Security</h2>
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>📦 Security Support</h3>
+            <p>Indicates whether the device is still receiving security updates from the manufacturer, which is crucial
+                for protecting against known vulnerabilities.</p>
+        </div>
+        <div class="info-card">
+            <h3>🔐 Secure Boot</h3>
+            <p>Verified Boot ensures that all executed code comes from a trusted source and hasn't been tampered with.
+                It establishes a chain of trust from the bootloader through the kernel to the system.</p>
+        </div>
+        <div class="info-card">
+            <h3>🔑 Hardware Keystore (Anti Chip-Off)</h3>
+            <p>Hardware-backed keystores store cryptographic keys in dedicated secure hardware, making them resistant to
+                extraction even if the device is partially compromised.</p>
+        </div>
+        <div class="info-card">
+            <h3>🛠️ Chip-off attacks</h3>
+            <p>Chip-off attacks involve physically removing the memory chip from a device to extract data directly. This
+                method bypasses many software-based security measures.</p>
+        </div>
+        <div class="info-card">
+            <h3>🔓️ Hardware exploits</h3>
+            <p>Hardware exploits target unpatchable vulnerabilities in the hardware to gain unauthorized access or control over the device.</p>
+        </div>
+    </div>
+</section>
+{{/inline}}
+{{#*inline "script"}}
+<script>
+    document.getElementById('search').addEventListener('input', filterTable);
+    document.getElementById('vendor').addEventListener('change', filterTable);
+
+    function filterTable() {
+        const searchTerm = document.getElementById('search').value.toLowerCase();
+        const vendorFilter = document.getElementById('vendor').value.toLowerCase();
+        const rows = document.querySelectorAll('tbody tr');
+
+        rows.forEach(row => {
+            const deviceName = row.querySelector('.device-name').textContent.toLowerCase();
+            const deviceCodename = row.querySelector('.device-codename').textContent.toLowerCase();
+            const vendor = row.dataset.vendor;
+
+            const matchesSearch = deviceName.includes(searchTerm) || deviceCodename.includes(searchTerm);
+            const matchesVendor = !vendorFilter || vendor == vendorFilter;
+
+            row.hidden = !(matchesSearch && matchesVendor);
+        });
+    }
+    filterTable();
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+{{/inline}}
+{{> base.html.hbs }}
