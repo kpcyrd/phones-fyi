@@ -1,19 +1,12 @@
 [[rule]]
-device = "FP3"
-category = "secure-boot"
+devices = ["FP3", "FP4"]
+categories = ["secure-boot", "bfu-secure", "afu-secure"]
 class = "no"
 conclusion = "Insecure defaults"
 reference = "https://forum.fairphone.com/t/bootloader-avb-keys-used-in-roms-for-fairphone-3-4/83448/11"
 
 [[rule]]
-device = "FP4"
-category = "secure-boot"
-class = "no"
-conclusion = "Insecure defaults"
-reference = "https://forum.fairphone.com/t/bootloader-avb-keys-used-in-roms-for-fairphone-3-4/83448/11"
-
-[[rule]]
-device = "FP5"
-category = "secure-boot"
+devices = ["FP5"]
+categories = ["secure-boot"]
 class = "yes"
 conclusion = "Yes"

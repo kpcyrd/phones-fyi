@@ -3,10 +3,13 @@ use serde::{Deserialize, Serialize};
 use std::{collections::BTreeMap, path::Path};
 use tokio::fs;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "kebab-case")]
 pub enum Category {
     SecureBoot,
+    HardwareKeystore,
+    BfuSecure,
+    AfuSecure,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -21,6 +24,9 @@ pub struct Detailed<T> {
     #[serde(flatten)]
     pub item: T,
     pub secure_boot: Option<Status>,
+    pub hardware_keystore: Option<Status>,
+    pub bfu_secure: Option<Status>,
+    pub afu_secure: Option<Status>,
 }
 
 #[derive(Debug, Default, Deserialize)]
@@ -33,17 +39,25 @@ impl RuleSet {
         let mut detailed = Detailed {
             item: device,
             secure_boot: None,
+            hardware_keystore: None,
+            bfu_secure: None,
+            afu_secure: None,
         };
 
         for rule in self.map.get(&detailed.item.codename).into_iter().flatten() {
-            match rule.category {
-                Category::SecureBoot => {
-                    detailed.secure_boot = Some(Status {
-                        class: rule.class.clone(),
-                        conclusion: rule.conclusion.clone(),
-                        reference: rule.reference.clone(),
-                    });
-                }
+            for category in &rule.categories {
+                let slot = match category {
+                    Category::SecureBoot => &mut detailed.secure_boot,
+                    Category::HardwareKeystore => &mut detailed.hardware_keystore,
+                    Category::BfuSecure => &mut detailed.bfu_secure,
+                    Category::AfuSecure => &mut detailed.afu_secure,
+                };
+
+                *slot = Some(Status {
+                    class: rule.class.clone(),
+                    conclusion: rule.conclusion.clone(),
+                    reference: rule.reference.clone(),
+                });
             }
         }
 
@@ -53,14 +67,14 @@ impl RuleSet {
 
 #[derive(Debug, Deserialize)]
 pub struct RulesFile {
-    #[serde(rename = "rule")]
+    #[serde(default, rename = "rule")]
     rules: Vec<Rule>,
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Clone, Deserialize)]
 pub struct Rule {
-    device: String,
-    category: Category,
+    devices: Vec<String>,
+    categories: Vec<Category>,
     class: String,
     conclusion: String,
     reference: Option<String>,
@@ -83,11 +97,13 @@ pub async fn load_all<P: AsRef<Path>>(path: P) -> Result<RuleSet> {
         let file: RulesFile = toml::from_str(&data)?;
 
         for rule in file.rules {
-            ruleset
-                .map
-                .entry(rule.device.clone())
-                .or_default()
-                .push(rule);
+            for device in &rule.devices {
+                ruleset
+                    .map
+                    .entry(device.clone())
+                    .or_default()
+                    .push(rule.clone());
+            }
         }
     }
 

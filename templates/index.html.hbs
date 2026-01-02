@@ -24,11 +24,9 @@
                 <th>Device</th>
                 <th><span class="tooltip" data-tooltip="Still receiving security updates">Security Support</span></th>
                 <th><span class="tooltip" data-tooltip="Verified Boot ensures system integrity">Secure Boot</span></th>
-                <th><span class="tooltip" data-tooltip="Trusted Execution Environment">TEE</span></th>
-                <th><span class="tooltip" data-tooltip="Hardware-backed keystore">HW Keystore</span></th>
-                <th><span class="tooltip" data-tooltip="Hardware security module">HSM</span></th>
-                <th><span class="tooltip" data-tooltip="Rollback protection">Rollback Prot.</span></th>
-                <th><span class="tooltip" data-tooltip="Bootloader unlock support">Unlockable</span></th>
+                <th><span class="tooltip" data-tooltip="Hardware-backed keystore">Hardware Keystore</span></th>
+                <th><span class="tooltip" data-tooltip="Before first unlock">BFU Secure</span></th>
+                <th><span class="tooltip" data-tooltip="After first unlock">AFU Secure</span></th>
             </tr>
         </thead>
         <tbody>
@@ -50,11 +48,9 @@
                 <td><span class="badge badge-no">✗ No</span></td>
                 {{/if}}
                 <td>{{> status.html.hbs status=this.secure_boot }}</td>
-                <td><span class="badge badge-partial">⚠ Unknown</span></td>
-                <td><span class="badge badge-partial">⚠ Unknown</span></td>
-                <td><span class="badge badge-partial">⚠ Unknown</span></td>
-                <td><span class="badge badge-partial">⚠ Unknown</span></td>
-                <td><span class="badge badge-partial">⚠ Unknown</span></td>
+                <td>{{> status.html.hbs status=this.hardware_keystore }}</td>
+                <td>{{> status.html.hbs status=this.bfu_secure }}</td>
+                <td>{{> status.html.hbs status=this.afu_secure }}</td>
             </tr>
             {{/each}}
         </tbody>
