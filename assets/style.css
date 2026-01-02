@@ -334,6 +334,10 @@ tr:hover {
     line-height: 1.6;
 }
 
+.info-card a {
+  color: var(--accent-blue);
+}
+
 footer {
     margin-top: 4rem;
     padding: 2rem 0;
