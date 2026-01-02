@@ -75,6 +75,7 @@ fn extract_device(doc: &NodeDataRef<ElementData>, vendor: &str) -> Option<Device
         codename: codename.to_string(),
         name: devicename,
         vendor_id: vendor.to_string(),
+        release_date: "".to_string(),
     };
     Some(device)
 }

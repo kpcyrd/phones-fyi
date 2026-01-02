@@ -39,6 +39,12 @@ async fn main() -> Result<()> {
                 let mut data: Vec<hardware::Device> = plumbing::read_json(path).await?;
                 devices.append(&mut data);
             }
+            devices.sort_by(|a, b| {
+                a.release_date
+                    .as_str()
+                    .cmp(b.release_date.as_str())
+                    .reverse()
+            });
 
             let index = html.index(vendors, devices)?;
             fs::write(output.join("index.html"), index).await?;

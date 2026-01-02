@@ -36,6 +36,7 @@ pub async fn fetch(file: Option<PathBuf>) -> Result<Vec<Device>> {
             codename: format!("iphone-{}", label),
             name: format!("iPhone {}", release.label),
             vendor_id: "apple".to_string(),
+            release_date: release.releaseDate,
         });
     }
     Ok(devices)
