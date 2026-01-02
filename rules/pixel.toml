@@ -1,0 +1,108 @@
+# GrapheneOS supported Pixel devices with secure boot and hardware keystore
+[[rule]]
+devices = [
+  "rango", # Pixel 10 Pro Fold
+  "mustang", # Pixel 10 Pro XL
+  "blazer", # Pixel 10 Pro
+  "frankel", # Pixel 10
+  "tegu", # Pixel 9a
+  "comet", # Pixel 9 Pro Fold
+  "komodo", # Pixel 9 Pro XL
+  "caiman", # Pixel 9 Pro
+  "tokay", # Pixel 9
+  "akita", # Pixel 8a
+  "husky", # Pixel 8 Pro
+  "shiba", # Pixel 8
+  "felix", # Pixel Fold
+  "tangorpro", # Pixel Tablet
+  "lynx", # Pixel 7a
+  "cheetah", # Pixel 7 Pro
+  "panther", # Pixel 7
+  "bluejay", # Pixel 6a
+  "raven", # Pixel 6 Pro
+  "oriole", # Pixel 6
+]
+categories = ["secure-boot", "hardware-keystore", "bfu-secure", "afu-secure"]
+class = "yes"
+conclusion = "Yes"
+reference = "https://grapheneos.org/faq#supported-devices"
+
+# Titan M2 hardware keystore
+[[rule]]
+devices = [
+  "rango", # Pixel 10 Pro Fold
+  "mustang", # Pixel 10 Pro XL
+  "blazer", # Pixel 10 Pro
+  "frankel", # Pixel 10
+  "tegu", # Pixel 9a
+  "comet", # Pixel 9 Pro Fold
+  "komodo", # Pixel 9 Pro XL
+  "caiman", # Pixel 9 Pro
+  "tokay", # Pixel 9
+  "akita", # Pixel 8a
+  "husky", # Pixel 8 Pro
+  "shiba", # Pixel 8
+  "felix", # Pixel Fold
+  "tangorpro", # Pixel Tablet
+  "lynx", # Pixel 7a
+  "cheetah", # Pixel 7 Pro
+  "panther", # Pixel 7
+  "bluejay", # Pixel 6a
+  "raven", # Pixel 6 Pro
+  "oriole", # Pixel 6
+]
+categories = ["hardware-keystore"]
+class = "yes"
+conclusion = "Titan M2"
+
+# Titan M hardware keystore
+[[rule]]
+devices = [
+  "barbet", # Pixel 5a
+  "redfin", # Pixel 5
+  "bramble", # Pixel 4a 5G
+  "sunfish", # Pixel 4a
+  "coral", # Pixel 4 XL
+  "flame", # Pixel 4
+  "bonito", # Pixel 3a XL
+  "sargo", # Pixel 3a
+  "crosshatch", # Pixel 3 XL
+  "blueline", # Pixel 3
+]
+categories = ["hardware-keystore"]
+class = "yes"
+conclusion = "Titan M"
+
+# No hardware keystore
+[[rule]]
+devices = [
+  "taimen", # Pixel 2 XL
+  "walleye", # Pixel 2
+  "marlin", # Pixel XL
+  "sailfish", # Pixel
+]
+categories = ["hardware-keystore", "bfu-secure", "afu-secure"]
+class = "no"
+conclusion = "No"
+
+# All pixel devices have verified boot
+[[rule]]
+devices = [
+  "barbet", # Pixel 5a
+  "redfin", # Pixel 5
+  "bramble", # Pixel 4a 5G
+  "sunfish", # Pixel 4a
+  "coral", # Pixel 4 XL
+  "flame", # Pixel 4
+  "bonito", # Pixel 3a XL
+  "sargo", # Pixel 3a
+  "crosshatch", # Pixel 3 XL
+  "blueline", # Pixel 3
+  "taimen", # Pixel 2 XL
+  "walleye", # Pixel 2
+  "marlin", # Pixel XL
+  "sailfish", # Pixel
+]
+categories = ["secure-boot"]
+class = "yes"
+conclusion = "Yes"
