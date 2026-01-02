@@ -60,7 +60,11 @@
                         </div>
                     </div>
                 </td>
+                {{#if this.security_support}}
                 <td><span class="badge badge-yes">✓ Yes</span></td>
+                {{else}}
+                <td><span class="badge badge-no">✗ No</span></td>
+                {{/if}}
                 <td><span class="badge badge-partial">⚠ Unknown</span></td>
                 <td><span class="badge badge-partial">⚠ Unknown</span></td>
                 <td><span class="badge badge-partial">⚠ Unknown</span></td>

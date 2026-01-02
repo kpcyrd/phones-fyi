@@ -76,6 +76,7 @@ fn extract_device(doc: &NodeDataRef<ElementData>, vendor: &str) -> Option<Device
         name: devicename,
         vendor_id: vendor.to_string(),
         release_date: "".to_string(),
+        security_support: true, // Assume all LineageOS supported devices have security updates
     };
     Some(device)
 }

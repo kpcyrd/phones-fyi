@@ -12,5 +12,6 @@ pub struct Device {
     pub name: String,
     pub vendor_id: String,
     pub release_date: String,
+    pub security_support: bool,
     // pub discontinued: bool,
 }

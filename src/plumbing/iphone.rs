@@ -17,10 +17,11 @@ struct ApiEntity {
 }
 
 #[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
 struct ApiRelease {
     label: String,
-    releaseDate: String,
-    isMaintained: bool,
+    release_date: String,
+    is_maintained: bool,
 }
 
 pub async fn fetch(file: Option<PathBuf>) -> Result<Vec<Device>> {
@@ -36,7 +37,8 @@ pub async fn fetch(file: Option<PathBuf>) -> Result<Vec<Device>> {
             codename: format!("iphone-{}", label),
             name: format!("iPhone {}", release.label),
             vendor_id: "apple".to_string(),
-            release_date: release.releaseDate,
+            release_date: release.release_date,
+            security_support: release.is_maintained,
         });
     }
     Ok(devices)
