@@ -1,6 +1,6 @@
 use crate::{errors::*, hardware::Device};
 use serde::{Deserialize, Serialize};
-use std::{collections::BTreeMap, path::Path};
+use std::path::Path;
 use tokio::fs;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -29,9 +29,9 @@ pub struct Detailed<T> {
     pub afu_secure: Option<Status>,
 }
 
-#[derive(Debug, Default, Deserialize)]
+#[derive(Debug, Default)]
 pub struct RuleSet {
-    map: BTreeMap<String, Vec<Rule>>,
+    map: Vec<(Vec<glob::Pattern>, Rule)>,
 }
 
 impl RuleSet {
@@ -44,20 +44,25 @@ impl RuleSet {
             afu_secure: None,
         };
 
-        for rule in self.map.get(&detailed.item.codename).into_iter().flatten() {
-            for category in &rule.categories {
-                let slot = match category {
-                    Category::SecureBoot => &mut detailed.secure_boot,
-                    Category::HardwareKeystore => &mut detailed.hardware_keystore,
-                    Category::BfuSecure => &mut detailed.bfu_secure,
-                    Category::AfuSecure => &mut detailed.afu_secure,
-                };
+        for (patterns, rule) in &self.map {
+            if patterns
+                .iter()
+                .any(|pattern| pattern.matches(&detailed.item.codename))
+            {
+                for category in &rule.categories {
+                    let slot = match category {
+                        Category::SecureBoot => &mut detailed.secure_boot,
+                        Category::HardwareKeystore => &mut detailed.hardware_keystore,
+                        Category::BfuSecure => &mut detailed.bfu_secure,
+                        Category::AfuSecure => &mut detailed.afu_secure,
+                    };
 
-                *slot = Some(Status {
-                    class: rule.class.clone(),
-                    conclusion: rule.conclusion.clone(),
-                    reference: rule.reference.clone(),
-                });
+                    *slot = Some(Status {
+                        class: rule.class.clone(),
+                        conclusion: rule.conclusion.clone(),
+                        reference: rule.reference.clone(),
+                    });
+                }
             }
         }
 
@@ -97,13 +102,12 @@ pub async fn load_all<P: AsRef<Path>>(path: P) -> Result<RuleSet> {
         let file: RulesFile = toml::from_str(&data)?;
 
         for rule in file.rules {
-            for device in &rule.devices {
-                ruleset
-                    .map
-                    .entry(device.clone())
-                    .or_default()
-                    .push(rule.clone());
-            }
+            let pattern = rule
+                .devices
+                .iter()
+                .map(|s| glob::Pattern::new(s))
+                .collect::<Result<Vec<_>, _>>()?;
+            ruleset.map.push((pattern, rule.clone()));
         }
     }
 

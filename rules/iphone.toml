@@ -1,0 +1,58 @@
+[[rule]]
+devices = ["iphone-*"]
+categories = ["secure-boot", "bfu-secure", "afu-secure"]
+class = "yes"
+conclusion = "Yes"
+
+[[rule]]
+devices = ["iphone-*"]
+categories = ["hardware-keystore"]
+class = "yes"
+conclusion = "Secure Enclave"
+reference = "https://support.apple.com/en-lamr/guide/security/sec59b0b31ff/web"
+
+[[rule]]
+devices = [
+    "iphone-5",
+    "iphone-4s",
+    "iphone-4",
+    "iphone-3gs",
+    "iphone-3g",
+    "iphone-1",
+]
+categories = ["hardware-keystore"]
+class = "no"
+conclusion = "No"
+
+[[rule]]
+devices = [
+    "iphone-4",
+    "iphone-4s",
+    "iphone-5",
+    "iphone-5c",
+    "iphone-5s",
+    "iphone-6",
+    "iphone-6-plus",
+    "iphone-6s",
+    "iphone-6s-plus",
+    "iphone-se-(1st-generation)",
+    "iphone-7",
+    "iphone-7-plus",
+    "iphone-8",
+    "iphone-8-plus",
+    "iphone-x",
+]
+categories = ["secure-boot", "bfu-secure", "afu-secure"]
+class = "no"
+conclusion = "No"
+reference = "https://blog.elcomsoft.com/2020/10/apple-mobile-devices-cheat-sheet/"
+
+[[rule]]
+devices = [
+    "iphone-1",
+    "iphone-3g",
+    "iphone-3gs",
+]
+categories = ["secure-boot", "bfu-secure", "afu-secure"]
+class = "no"
+conclusion = "No"
