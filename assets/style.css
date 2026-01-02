@@ -192,6 +192,11 @@ tr:hover {
     color: var(--text-primary);
 }
 
+.device-name a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
 .device-codename {
     font-size: 0.85rem;
     color: var(--text-muted);
@@ -356,7 +361,7 @@ footer a:hover {
 .tooltip:hover::after {
     content: attr(data-tooltip);
     position: absolute;
-    bottom: 100%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--bg-tertiary);
@@ -367,7 +372,7 @@ footer a:hover {
     font-size: 0.85rem;
     white-space: nowrap;
     z-index: 1000;
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .disclaimer {

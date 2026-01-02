@@ -32,29 +32,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>
-                    <div class="device-info">
-                        <div>
-                            <div class="device-name">Google Pixel 8 Pro</div>
-                            <div class="device-codename">husky</div>
-                        </div>
-                    </div>
-                </td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-                <td><span class="badge badge-yes">✓ Trusty</span></td>
-                <td><span class="badge badge-yes">✓ Titan M2</span></td>
-                <td><span class="badge badge-yes">✓ Titan M2</span></td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-            </tr>
             {{#each devices}}
             <tr data-vendor="{{this.vendor_id}}">
                 <td>
                     <div class="device-info">
                         <div>
-                            <div class="device-name">{{lookup (lookup ../vendors this.vendor_id) "name" }} {{this.name}}
+                            <div class="device-name">
+                                <a href="#">{{lookup (lookup ../vendors this.vendor_id) "name" }} {{this.name}}</a>
                             </div>
                             <div class="device-codename" title="{{this.release_date}}">{{this.codename}}</div>
                         </div>
@@ -73,57 +57,6 @@
                 <td><span class="badge badge-partial">⚠ Unknown</span></td>
             </tr>
             {{/each}}
-            <tr>
-                <td>
-                    <div class="device-info">
-                        <div>
-                            <div class="device-name">Apple iPhone 15 Pro</div>
-                            <div class="device-codename">d83ap</div>
-                        </div>
-                    </div>
-                </td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-                <td><span class="badge badge-yes">✓ SEP</span></td>
-                <td><span class="badge badge-yes">✓ Secure Enclave</span></td>
-                <td><span class="badge badge-yes">✓ Secure Enclave</span></td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-                <td><span class="badge badge-no">✗ No</span></td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="device-info">
-                        <div>
-                            <div class="device-name">Fairphone 5</div>
-                            <div class="device-codename">FP5</div>
-                        </div>
-                    </div>
-                </td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-                <td><span class="badge badge-yes">✓ QTEE</span></td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-                <td><span class="badge badge-no">✗ No</span></td>
-                <td><span class="badge badge-partial">⚠ Partial</span></td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="device-info">
-                        <div>
-                            <div class="device-name">OnePlus 12</div>
-                            <div class="device-codename">pineapple</div>
-                        </div>
-                    </div>
-                </td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-                <td><span class="badge badge-yes">✓ QTEE</span></td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-                <td><span class="badge badge-no">✗ No</span></td>
-                <td><span class="badge badge-partial">⚠ Partial</span></td>
-                <td><span class="badge badge-yes">✓ Yes</span></td>
-            </tr>
         </tbody>
     </table>
 </section>
