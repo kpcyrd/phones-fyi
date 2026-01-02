@@ -1,9 +1,13 @@
 use crate::errors::*;
 use crate::fetch;
 use crate::hardware::{Device, Vendor};
+use async_compression::tokio::bufread::GzipDecoder;
 use kuchikiki::{ElementData, NodeDataRef, NodeRef, traits::TendrilSink};
+use serde::Deserialize;
 use std::collections::BTreeMap;
 use std::path::PathBuf;
+use tokio::io::AsyncReadExt;
+use tokio_stream::StreamExt;
 
 const DENYED_VENDORS: &[&str] = &[
     "banana-pi",
@@ -32,7 +36,14 @@ const DENYED_DEVICES: &[&str] = &[
     "tangorpro",
 ];
 
-const URL: &str = "https://wiki.lineageos.org/devices/";
+const HTML_URL: &str = "https://wiki.lineageos.org/devices/";
+const TAR_URL: &str = "https://github.com/LineageOS/lineage_wiki/archive/refs/heads/main.tar.gz";
+
+#[derive(Debug, Deserialize)]
+struct GitEntry {
+    codename: String,
+    release: String,
+}
 
 fn extract_vendors(doc: &NodeRef) -> BTreeMap<String, Vendor> {
     let mut vendors = BTreeMap::new();
@@ -54,7 +65,11 @@ fn extract_vendors(doc: &NodeRef) -> BTreeMap<String, Vendor> {
     vendors
 }
 
-fn extract_device(doc: &NodeDataRef<ElementData>, vendor: &str) -> Option<Device> {
+fn extract_device(
+    doc: &NodeDataRef<ElementData>,
+    extra: &BTreeMap<String, GitEntry>,
+    vendor: &str,
+) -> Option<Device> {
     let attrs = doc.attributes.borrow();
     let codename = attrs.get("data-codename")?;
 
@@ -71,18 +86,67 @@ fn extract_device(doc: &NodeDataRef<ElementData>, vendor: &str) -> Option<Device
 
     let devicename = node.select_first("span.devicename").ok()?.text_contents();
 
+    let Some(extra) = extra.get(codename) else {
+        error!("Failed to lookup information for device: {:?}", codename);
+        return None;
+    };
+
     let device = Device {
         codename: codename.to_string(),
         name: devicename,
         vendor_id: vendor.to_string(),
-        release_date: "".to_string(),
+        release_date: extra.release.clone(),
         security_support: true, // Assume all LineageOS supported devices have security updates
     };
     Some(device)
 }
 
-pub async fn fetch(file: Option<PathBuf>) -> Result<(BTreeMap<String, Vendor>, Vec<Device>)> {
-    let text = fetch::fetch(URL, file.as_deref()).await?;
+async fn extract_lookup_table(file: Option<PathBuf>) -> Result<BTreeMap<String, GitEntry>> {
+    let stream = fetch::FetchStream::create(TAR_URL, file.as_deref()).await?;
+    let reader = GzipDecoder::new(stream);
+    let mut archive = tokio_tar::Archive::new(reader);
+
+    let mut map = BTreeMap::new();
+    let mut entries = archive.entries()?;
+    while let Some(entry) = entries.next().await {
+        let mut entry = entry?;
+        let path = entry.path()?;
+        if path.starts_with("lineage_wiki-main/_data/devices/") {
+            debug!("Found device file: {:?}", path);
+
+            let Some(extension) = path.extension() else {
+                continue;
+            };
+            if extension != "yml" {
+                continue;
+            }
+            let path = path.to_path_buf();
+
+            // Process device file
+            let mut contents = String::new();
+            entry.read_to_string(&mut contents).await?;
+
+            let entry = match serde_yaml_ng::from_str::<GitEntry>(&contents) {
+                Ok(entry) => entry,
+                Err(err) => {
+                    warn!("Failed to parse YAML file {:?}: {:#}", path, err);
+                    continue;
+                }
+            };
+            map.insert(entry.codename.clone(), entry);
+        }
+    }
+
+    Ok(map)
+}
+
+pub async fn fetch(
+    html_file: Option<PathBuf>,
+    tar_file: Option<PathBuf>,
+) -> Result<(BTreeMap<String, Vendor>, Vec<Device>)> {
+    let extra = extract_lookup_table(tar_file).await?;
+
+    let text = fetch::fetch(HTML_URL, html_file.as_deref()).await?;
     let doc = kuchikiki::parse_html().one(text);
 
     let mut vendors = extract_vendors(&doc);
@@ -105,7 +169,7 @@ pub async fn fetch(file: Option<PathBuf>) -> Result<(BTreeMap<String, Vendor>, V
         }
 
         for dev in node.select(".item").unwrap() {
-            let Some(device) = extract_device(&dev, data_vendor) else {
+            let Some(device) = extract_device(&dev, &extra, data_vendor) else {
                 continue;
             };
             debug!("device={:?}", device);

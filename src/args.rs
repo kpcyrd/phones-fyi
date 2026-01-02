@@ -22,8 +22,10 @@ pub enum SubCommand {
     },
     /// Query devices from linageos.org
     FetchLinage {
-        #[clap(short = 'i', long)]
-        file: Option<PathBuf>,
+        #[clap(short = 'H', long)]
+        html_file: Option<PathBuf>,
+        #[clap(short = 'T', long)]
+        tar_file: Option<PathBuf>,
         #[clap(long)]
         devices: Option<PathBuf>,
         #[clap(long)]
