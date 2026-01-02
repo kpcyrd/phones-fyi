@@ -4,6 +4,7 @@ mod fetch;
 mod hardware;
 mod html;
 mod plumbing;
+mod rules;
 
 use crate::args::{Args, SubCommand};
 use crate::errors::*;
@@ -27,6 +28,7 @@ async fn main() -> Result<()> {
             devices: device_paths,
         } => {
             let html = html::Html::new().await?;
+            let rules = rules::load_all("rules/").await?;
 
             let mut vendors = BTreeMap::new();
             for path in &vendor_paths {
@@ -46,7 +48,7 @@ async fn main() -> Result<()> {
                     .reverse()
             });
 
-            let index = html.index(vendors, devices)?;
+            let index = html.index(vendors, devices, &rules)?;
             fs::write(output.join("index.html"), index).await?;
 
             fs::create_dir_all(output.join("assets")).await?;

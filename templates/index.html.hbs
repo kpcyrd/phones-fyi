@@ -49,7 +49,7 @@
                 {{else}}
                 <td><span class="badge badge-no">✗ No</span></td>
                 {{/if}}
-                <td><span class="badge badge-partial">⚠ Unknown</span></td>
+                <td>{{> status.html.hbs status=this.secure_boot }}</td>
                 <td><span class="badge badge-partial">⚠ Unknown</span></td>
                 <td><span class="badge badge-partial">⚠ Unknown</span></td>
                 <td><span class="badge badge-partial">⚠ Unknown</span></td>
