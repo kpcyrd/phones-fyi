@@ -1,5 +1,5 @@
 {{#*inline "page"}}
-<section class="search-filter">
+<section id="comparison" class="search-filter">
     <div class="filter-grid">
         <div class="filter-group">
             <label for="search">Search</label>
@@ -17,7 +17,7 @@
     </div>
 </section>
 
-<section id="comparison" class="comparison-table">
+<section class="comparison-table">
     <table>
         <thead>
             <tr>
@@ -131,6 +131,11 @@
                 target.scrollIntoView({ behavior: 'smooth' });
             }
         });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const height = Math.ceil(window.scrollY + document.querySelector('main').getBoundingClientRect().top);
+        document.documentElement.style.scrollPaddingTop = `${height}px`;
     });
 </script>
 {{/inline}}
