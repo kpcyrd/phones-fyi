@@ -20,8 +20,8 @@ pub enum SubCommand {
         #[clap(long)]
         devices: Vec<PathBuf>,
     },
-    /// Query devices from linageos.org
-    FetchLinage {
+    /// Query devices from lineageos.org
+    FetchLineage {
         #[clap(short = 'H', long)]
         html_file: Option<PathBuf>,
         #[clap(short = 'T', long)]

@@ -1,5 +1,5 @@
 pub mod iphone;
-pub mod linage;
+pub mod lineage;
 
 use crate::errors::*;
 use std::path::Path;

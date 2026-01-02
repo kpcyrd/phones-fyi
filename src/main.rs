@@ -62,13 +62,13 @@ async fn main() -> Result<()> {
                 plumbing::write_json(&path, &devices).await?;
             }
         }
-        SubCommand::FetchLinage {
+        SubCommand::FetchLineage {
             html_file,
             tar_file,
             devices: devices_path,
             vendors: vendors_path,
         } => {
-            let (vendors, devices) = plumbing::linage::fetch(html_file, tar_file).await?;
+            let (vendors, devices) = plumbing::lineage::fetch(html_file, tar_file).await?;
 
             if let Some(path) = &vendors_path {
                 plumbing::write_json(&path, &vendors).await?;
