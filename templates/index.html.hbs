@@ -36,7 +36,7 @@
                     <div class="device-info">
                         <div>
                             <div class="device-name">
-                                <a href="#">{{lookup (lookup ../vendors this.vendor_id) "name" }} {{this.name}}</a>
+                                <a href="devices/{{this.codename}}/">{{lookup (lookup ../vendors this.vendor_id) "name" }} {{this.name}}</a>
                             </div>
                             <div class="device-codename" title="{{this.release_date}}">{{this.codename}}</div>
                         </div>
@@ -82,19 +82,23 @@
         </div>
         <div class="info-card">
             <h3>🔓️ Hardware exploits</h3>
-            <p>Hardware exploits target unpatchable vulnerabilities in the hardware to gain unauthorized access or control over the device.</p>
+            <p>Hardware exploits target unpatchable vulnerabilities in the hardware to gain unauthorized access or
+                control over the device.</p>
         </div>
         <div class="info-card">
             <h3>💾 No software exploits</h3>
-            <p>This overview is explicitly excluding software-based vulnerabilities (local root) and focuses solely on hardware-level security aspects.</p>
+            <p>This overview is explicitly excluding software-based vulnerabilities (local root) and focuses solely on
+                hardware-level security aspects.</p>
         </div>
         <div class="info-card">
             <h3>⏪️ Before first unlock (BFU)</h3>
-            <p>This refers to the security state of the device before the user has unlocked it for the first time after a reboot, when certain security features may be more restrictive.</p>
+            <p>This refers to the security state of the device before the user has unlocked it for the first time after
+                a reboot, when certain security features may be more restrictive.</p>
         </div>
         <div class="info-card">
             <h3>⏩️ After first unlock (AFU)</h3>
-            <p>This refers to the security state of the device after the user has unlocked it for the first time following a reboot, when some security features may be less restrictive.</p>
+            <p>This refers to the security state of the device after the user has unlocked it for the first time
+                following a reboot, when some security features may be less restrictive.</p>
         </div>
     </div>
 </section>
@@ -123,13 +127,16 @@
     filterTable();
 
     // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
+    ['#', '/#'].forEach(prefix => {
+        document.querySelectorAll(`a[href^="${prefix}"]`).forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href').replace(/^\//, '');
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
         });
     });
 

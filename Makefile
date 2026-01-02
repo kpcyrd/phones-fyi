@@ -8,3 +8,6 @@ all:
 fetch:
 	cargo run --release -- fetch-lineage -H lineage-index.html -T lineage-wiki-main.tar.gz --devices data/android.json --vendors data/android-vendors.json
 	cargo run --release -- fetch-iphone -i eol-iphone.json --devices data/iphone.json
+
+serve:
+	miniserve -i 127.0.0.1 --index index.html build

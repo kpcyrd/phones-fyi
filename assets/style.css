@@ -51,6 +51,10 @@ header {
     gap: 1rem;
 }
 
+.header-content a {
+    text-decoration: none;
+}
+
 h1 {
     font-size: 2rem;
     font-weight: 600;
@@ -279,6 +283,15 @@ tr:hover {
 
 .score-low {
     background: linear-gradient(90deg, var(--accent-red), #ff6b6b);
+}
+
+.details-page {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 50rem;
 }
 
 .info-section {

@@ -35,7 +35,11 @@ pub struct RuleSet {
 }
 
 impl RuleSet {
-    pub fn resolve(&self, device: Device) -> Detailed<Device> {
+    pub fn resolve(&self, device: Device) -> Result<Detailed<Device>> {
+        if device.codename.contains('/') || device.codename.is_empty() {
+            bail!("Invalid codename: {}", device.codename);
+        }
+
         let mut detailed = Detailed {
             item: device,
             secure_boot: None,
@@ -66,7 +70,7 @@ impl RuleSet {
             }
         }
 
-        detailed
+        Ok(detailed)
     }
 }
 

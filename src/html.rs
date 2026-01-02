@@ -1,7 +1,7 @@
 use crate::{
     errors::*,
     hardware::{Device, Vendor},
-    rules::RuleSet,
+    rules::Detailed,
 };
 use serde_json::json;
 use std::{collections::BTreeMap, path::Path};
@@ -15,7 +15,7 @@ impl Html {
     pub async fn new() -> Result<Self> {
         let mut hbs = handlebars::Handlebars::new();
         hbs.set_prevent_indent(true);
-        for tpl in ["index.html.hbs", "base.html.hbs"] {
+        for tpl in ["base.html.hbs", "device.html.hbs", "index.html.hbs"] {
             let path = Path::new("templates").join(tpl);
             let data = fs::read_to_string(path).await?;
             hbs.register_template_string(tpl, &data)?;
@@ -41,20 +41,28 @@ impl Html {
 
     pub fn index(
         &self,
-        vendors: BTreeMap<String, Vendor>,
-        devices: Vec<Device>,
-        rules: &RuleSet,
+        vendors: &BTreeMap<String, Vendor>,
+        devices: &[Detailed<Device>],
     ) -> Result<String> {
-        let devices = devices
-            .into_iter()
-            .map(|device| rules.resolve(device))
-            .collect::<Vec<_>>();
-
         self.render(
             "index.html.hbs",
             &json!({
                 "vendors": vendors,
                 "devices": devices,
+            }),
+        )
+    }
+
+    pub fn device(
+        &self,
+        vendors: &BTreeMap<String, Vendor>,
+        device: &Detailed<Device>,
+    ) -> Result<String> {
+        self.render(
+            "device.html.hbs",
+            &json!({
+                "vendors": vendors,
+                "device": device,
             }),
         )
     }

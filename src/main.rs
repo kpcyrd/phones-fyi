@@ -48,11 +48,23 @@ async fn main() -> Result<()> {
                     .reverse()
             });
 
-            let index = html.index(vendors, devices, &rules)?;
+            let devices = devices
+                .into_iter()
+                .map(|device| rules.resolve(device))
+                .collect::<Result<Vec<_>>>()?;
+
+            let index = html.index(&vendors, &devices)?;
             fs::write(output.join("index.html"), index).await?;
 
             fs::create_dir_all(output.join("assets")).await?;
             fs::copy("assets/style.css", output.join("assets/style.css")).await?;
+
+            for dev in devices {
+                let path = output.join("devices").join(&dev.item.codename);
+                fs::create_dir_all(&path).await?;
+                let content = html.device(&vendors, &dev)?;
+                fs::write(path.join("index.html"), content).await?;
+            }
         }
         SubCommand::FetchIphone {
             file,
