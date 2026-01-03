@@ -1,8 +1,93 @@
 {{#*inline "page"}}
-<section class="details-page">
-<h1>{{device.name}}</h1>
-<p class="tagline">{{device.codename}}</p>
-<p>lorem ipsum</p>
+<section class="device-details">
+    <div class="device-header">
+        <div class="device-header-info">
+            <h1>{{lookup (lookup vendors device.vendor_id) "name"}} {{device.name}}</h1>
+            <p class="device-meta">
+                <span class="device-codename">{{device.codename}}</span>
+                {{#if device.release_date}}
+                <span class="separator">•</span>
+                <span class="release-date">Released {{device.release_date}}</span>
+                {{/if}}
+            </p>
+        </div>
+        {{#if (not (eq device.vendor_id "apple"))}}
+        <div class="device-image-container">
+            <img src="https://wiki.lineageos.org/images/devices/{{device.codename}}.png"
+                 alt="{{device.name}}"
+                 class="device-image"
+                 onerror="this.style.display='none'">
+        </div>
+        {{/if}}
+    </div>
+
+    <div class="security-overview">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">🛡</div>
+                    <h3>Security Support</h3>
+                </div>
+                <div class="feature-content">
+                    {{#if device.security_support}}
+                    <span class="badge badge-yes">✓ Available</span>
+                    <p class="feature-description">This device is currently receiving security updates from either the manufacturer or the community.</p>
+                    {{else}}
+                    <span class="badge badge-no">✗ Ended</span>
+                    <p class="feature-description">This device is no longer receiving security updates. Consider upgrading to a supported device.</p>
+                    {{/if}}
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Secure Boot</h3>
+                </div>
+                <div class="feature-content">
+                    {{> status.html.hbs status=device.secure_boot }}
+                    <p class="feature-description">Verified Boot ensures that all executed code comes from a trusted source and hasn't been tampered with. It establishes a chain of trust from the bootloader through the kernel to the system.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">🔑</div>
+                    <h3>Hardware Keystore</h3>
+                </div>
+                <div class="feature-content">
+                    {{> status.html.hbs status=device.hardware_keystore }}
+                    <p class="feature-description">Hardware-backed keystores store cryptographic keys in dedicated secure hardware (like TEE or Secure Element), making them resistant to extraction even if the device is compromised. This protects against chip-off attacks.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Before First Unlock (BFU)</h3>
+                </div>
+                <div class="feature-content">
+                    {{> status.html.hbs status=device.bfu_secure }}
+                    <p class="feature-description">BFU security protects data when the device has been powered on but not yet unlocked with credentials. This is the most secure state, where most data remains encrypted and inaccessible.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-header">
+                    <div class="feature-icon">🔓</div>
+                    <h3>After First Unlock (AFU)</h3>
+                </div>
+                <div class="feature-content">
+                    {{> status.html.hbs status=device.afu_secure }}
+                    <p class="feature-description">AFU security protects data after the device has been unlocked at least once since boot. While less secure than BFU, AFU with hardware keystore still provides strong protection against many attacks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-actions">
+        <a href="/" class="button-secondary">← Back to comparison</a>
+    </div>
 </section>
 {{/inline}}
 {{#*inline "script"}}
