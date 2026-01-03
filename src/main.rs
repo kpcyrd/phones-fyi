@@ -76,6 +76,17 @@ async fn main() -> Result<()> {
                 plumbing::write_json(&path, &devices).await?;
             }
         }
+        SubCommand::FetchKnox {
+            devices,
+            file,
+            rules: rules_path,
+        } => {
+            let rules = plumbing::knox::fetch(&devices, file).await?;
+
+            if let Some(path) = &rules_path {
+                plumbing::write_toml(&path, &rules).await?;
+            }
+        }
         SubCommand::FetchLineage {
             html_file,
             tar_file,

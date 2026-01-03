@@ -27,6 +27,7 @@ const DENYED_DEVICES: &[&str] = &[
     "gta4lwifi",
     "gta4xl",
     "gta4xlwifi",
+    "gtowifi",
     "gts4lv",
     "gts4lvwifi",
     "gts7l",

@@ -74,19 +74,25 @@ impl RuleSet {
     }
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Default, Serialize, Deserialize)]
 pub struct RulesFile {
-    #[serde(default, rename = "rule")]
+    #[serde(default, rename = "rule", skip_serializing_if = "Vec::is_empty")]
     rules: Vec<Rule>,
 }
 
-#[derive(Debug, Clone, Deserialize)]
+impl RulesFile {
+    pub fn push(&mut self, rule: Rule) {
+        self.rules.push(rule);
+    }
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Rule {
-    devices: Vec<String>,
-    categories: Vec<Category>,
-    class: String,
-    conclusion: String,
-    reference: Option<String>,
+    pub devices: Vec<String>,
+    pub categories: Vec<Category>,
+    pub class: String,
+    pub conclusion: String,
+    pub reference: Option<String>,
 }
 
 pub async fn load_all<P: AsRef<Path>>(path: P) -> Result<RuleSet> {

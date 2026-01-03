@@ -20,6 +20,21 @@ pub enum SubCommand {
         #[clap(long)]
         devices: Vec<PathBuf>,
     },
+    /// Query devices from endoflife.date/iphone
+    FetchIphone {
+        #[clap(short = 'i', long)]
+        file: Option<PathBuf>,
+        #[clap(long)]
+        devices: Option<PathBuf>,
+    },
+    /// Query devices from samsungknox.com
+    FetchKnox {
+        devices: PathBuf,
+        #[clap(short = 'i', long)]
+        file: Option<PathBuf>,
+        #[clap(long)]
+        rules: Option<PathBuf>,
+    },
     /// Query devices from lineageos.org
     FetchLineage {
         #[clap(short = 'H', long)]
@@ -30,12 +45,5 @@ pub enum SubCommand {
         devices: Option<PathBuf>,
         #[clap(long)]
         vendors: Option<PathBuf>,
-    },
-    /// Query devices from endoflife.date/iphone
-    FetchIphone {
-        #[clap(short = 'i', long)]
-        file: Option<PathBuf>,
-        #[clap(long)]
-        devices: Option<PathBuf>,
     },
 }
