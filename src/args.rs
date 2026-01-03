@@ -1,8 +1,11 @@
-use clap::Parser;
+use clap::{ArgAction, Parser};
 use std::path::PathBuf;
 
 #[derive(Debug, Parser)]
 pub struct Args {
+    /// Increase logging output
+    #[arg(short, long, action(ArgAction::Count))]
+    pub verbose: u8,
     #[clap(subcommand)]
     pub subcommand: SubCommand,
 }

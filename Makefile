@@ -6,8 +6,8 @@ all:
 		--devices data/iphone.json
 
 fetch:
-	cargo run --release -- fetch-lineage -H lineage-index.html -T lineage-wiki-main.tar.gz --devices data/android.json --vendors data/android-vendors.json
-	cargo run --release -- fetch-iphone -i eol-iphone.json --devices data/iphone.json
+	cargo run --release -- fetch-lineage -H cache/lineage-index.html -T cache/lineage-wiki-main.tar.gz --devices data/android.json --vendors data/android-vendors.json
+	cargo run --release -- fetch-iphone -i cache/eol-iphone.json --devices data/iphone.json
 	cargo run --release -- fetch-knox -i cache/knox.json data/android.json --rules rules/knox.toml
 
 serve:

@@ -17,8 +17,14 @@ use tokio::fs;
 async fn main() -> Result<()> {
     let args = Args::parse();
 
-    // let log_level = "info";
-    let log_level = "info,phones_fyi=debug";
+    let log_level = match args.verbose {
+        0 => "warn",
+        1 => "info",
+        2 => "info,phones_fyi=debug",
+        3 => "info,phones_fyi=trace",
+        4 => "debug",
+        _ => "trace",
+    };
     env_logger::init_from_env(Env::default().default_filter_or(log_level));
 
     match args.subcommand {
