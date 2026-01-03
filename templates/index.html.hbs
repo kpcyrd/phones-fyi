@@ -14,6 +14,22 @@
                 {{/each}}
             </select>
         </div>
+        <div class="filter-group">
+            <label for="os">Operating System</label>
+            <select id="os">
+                <option value="">Any</option>
+                <option value="android">Android</option>
+                <option value="ios">iOS</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="security">Security Level</label>
+            <select id="security">
+                <option value="">Any</option>
+                <option value="bfu">Secure "Before First Unlock"</option>
+                <option value="afu">Secure "After First Unlock"</option>
+            </select>
+        </div>
     </div>
 </section>
 
@@ -31,7 +47,7 @@
         </thead>
         <tbody>
             {{#each devices}}
-            <tr data-vendor="{{this.vendor_id}}">
+            <tr data-vendor="{{this.vendor_id}}" data-security="{{#if (eq this.afu_secure.class "yes")}}afu{{else if (eq this.bfu_secure.class "yes")}}bfu{{/if}}">
                 <td>
                     <div class="device-info">
                         <div>
@@ -118,21 +134,28 @@ which is also the license for content on this site.
 <script>
     document.getElementById('search').addEventListener('input', filterTable);
     document.getElementById('vendor').addEventListener('change', filterTable);
+    document.getElementById('os').addEventListener('change', filterTable);
+    document.getElementById('security').addEventListener('change', filterTable);
 
     function filterTable() {
         const searchTerm = document.getElementById('search').value.toLowerCase();
-        const vendorFilter = document.getElementById('vendor').value.toLowerCase();
+        const vendorFilter = document.getElementById('vendor').value;
+        const osFilter = document.getElementById('os').value;
+        const securityFilter = document.getElementById('security').value;
         const rows = document.querySelectorAll('tbody tr');
 
         rows.forEach(row => {
             const deviceName = row.querySelector('.device-name').textContent.toLowerCase();
             const deviceCodename = row.querySelector('.device-codename').textContent.toLowerCase();
             const vendor = row.dataset.vendor;
+            const isAndroid = vendor != 'apple';
 
             const matchesSearch = deviceName.includes(searchTerm) || deviceCodename.includes(searchTerm);
             const matchesVendor = !vendorFilter || vendor == vendorFilter;
+            const matchesOs = !osFilter || (osFilter == 'android' && isAndroid) || (osFilter === 'ios' && !isAndroid);
+            const matchesSecurity = !securityFilter || row.dataset.security == securityFilter;
 
-            row.hidden = !(matchesSearch && matchesVendor);
+            row.hidden = !(matchesSearch && matchesVendor && matchesOs && matchesSecurity);
         });
     }
     filterTable();
