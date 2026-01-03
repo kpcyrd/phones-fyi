@@ -97,7 +97,7 @@ pub async fn fetch(android_devices: &Path, html_file: Option<PathBuf>) -> Result
                     Category::BfuSecure,
                     Category::AfuSecure,
                 ],
-                class: "no".to_string(),
+                class: "partial".to_string(),
                 conclusion: "No Knox vault".to_string(),
                 reference: Some(URL.to_string()),
             });
