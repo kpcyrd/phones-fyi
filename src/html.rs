@@ -58,10 +58,15 @@ impl Html {
         vendors: &BTreeMap<String, Vendor>,
         device: &Detailed<Device>,
     ) -> Result<String> {
+        let vendor = vendors
+            .get(&device.item.vendor_id)
+            .map(|v| v.name.as_str())
+            .unwrap_or("");
+
         self.render(
             "device.html.hbs",
             &json!({
-                "vendors": vendors,
+                "vendor": vendor,
                 "device": device,
             }),
         )

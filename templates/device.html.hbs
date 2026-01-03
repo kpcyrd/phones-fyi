@@ -1,8 +1,10 @@
-{{#*inline "page"}}
+{{~#*inline "page_title"}}{{vendor}} {{device.name}} - Hardware Security | phones.fyi{{/inline~}}
+{{~#*inline "page_description"}}Check hardware security features for {{vendor}} {{device.name}} ({{device.codename}}): Secure boot, hardware keystore, BFU/AFU security status, and current security support.{{/inline~}}
+{{~#*inline "page"~}}
 <section class="device-details">
     <div class="device-header">
         <div class="device-header-info">
-            <h1>{{lookup (lookup vendors device.vendor_id) "name"}} {{device.name}}</h1>
+            <h1>{{vendor}} {{device.name}}</h1>
             <p class="device-meta">
                 <span class="device-codename">{{device.codename}}</span>
                 {{#if device.release_date}}
