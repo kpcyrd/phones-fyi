@@ -40,11 +40,11 @@
         <thead>
             <tr>
                 <th>Device</th>
-                <th><span class="tooltip" data-tooltip="Still receiving security updates">Security Support</span></th>
-                <th><span class="tooltip" data-tooltip="Verified Boot ensures system integrity">Secure Boot</span></th>
-                <th><span class="tooltip" data-tooltip="Hardware-backed keystore">Hardware Keystore</span></th>
-                <th><span class="tooltip" data-tooltip="Before first unlock">BFU Secure</span></th>
-                <th><span class="tooltip" data-tooltip="After first unlock">AFU Secure</span></th>
+                <th><a class="tooltip" data-tooltip="Still receiving security updates" href="#security-support">Security Support</a></th>
+                <th><a class="tooltip" data-tooltip="Verified Boot ensures system integrity" href="#secure-boot">Secure Boot</a></th>
+                <th><a class="tooltip" data-tooltip="Hardware-backed encryption keys" href="#hardware-keystore">Hardware Keystore</a></th>
+                <th><a class="tooltip" data-tooltip="Before first unlock" href="#bfu-secure">BFU Secure</a></th>
+                <th><a class="tooltip" data-tooltip="After first unlock" href="#afu-secure">AFU Secure</a></th>
             </tr>
         </thead>
         <tbody>
@@ -78,17 +78,17 @@
 <section id="about" class="info-section">
     <h2>Understanding Hardware Security</h2>
     <div class="info-grid">
-        <div class="info-card">
+        <div class="info-card" id="security-support">
             <h3>📦 Security Support</h3>
             <p>Indicates whether the device is still receiving security updates from the manufacturer, which is crucial
                 for protecting against known vulnerabilities.</p>
         </div>
-        <div class="info-card">
+        <div class="info-card" id="secure-boot">
             <h3>🔐 Secure Boot</h3>
             <p>Verified Boot ensures that all executed code comes from a trusted source and hasn't been tampered with.
                 It establishes a chain of trust from the bootloader through the kernel to the system.</p>
         </div>
-        <div class="info-card">
+        <div class="info-card" id="hardware-keystore">
             <h3>🔑 Hardware Keystore (Anti Chip-Off)</h3>
             <p>Hardware-backed keystores store cryptographic keys in dedicated secure hardware, making them resistant to
                 extraction even if the device is partially compromised.</p>
@@ -110,12 +110,12 @@
                 forensic hardware analysis equipment, but does not have access to vendor signing keys or the user's
                 credentials.</p>
         </div>
-        <div class="info-card">
+        <div class="info-card" id="bfu-secure">
             <h3>🔒️ Before first unlock (BFU)</h3>
             <p>This refers to the security state of the device before the user has unlocked it for the first time after
                 a reboot, when certain security features may be more restrictive.</p>
         </div>
-        <div class="info-card">
+        <div class="info-card" id="afu-secure">
             <h3>🔓️ After first unlock (AFU)</h3>
             <p>This refers to the security state of the device after the user has unlocked it for the first time
                 following a reboot, when some security features may be less restrictive.</p>

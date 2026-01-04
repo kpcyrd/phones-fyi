@@ -163,6 +163,11 @@ th {
     color: var(--text-primary);
 }
 
+th a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
 td {
     padding: 1rem;
     border-bottom: 1px solid var(--border-color);
