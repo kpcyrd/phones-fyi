@@ -2,7 +2,14 @@
 {{~#*inline "page_description"}}Compare hardware security features across Android and iOS devices. Check secure boot, hardware keystore, BFU/AFU security status, and security support for your phone.{{/inline~}}
 {{~#*inline "page"~}}
 <section id="comparison" class="search-filter">
-    <div class="filter-grid">
+    <button id="filter-toggle" class="filter-toggle" aria-expanded="false">
+        <span class="toggle-text">Show Filters</span>
+        <svg class="toggle-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+        </svg>
+    </button>
+
+    <div class="filter-grid" id="filter-content">
         <div class="filter-group">
             <label for="search">Search</label>
             <input type="text" id="search" placeholder="Device name or codename...">
@@ -139,6 +146,16 @@
 {{/inline}}
 {{#*inline "script"}}
 <script>
+    // Filter toggle functionality
+    document.getElementById('filter-toggle').addEventListener('click', function() {
+        const filterContent = document.getElementById('filter-content');
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        filterContent.classList.toggle('expanded');
+        this.querySelector('.toggle-text').textContent = isExpanded ? 'Show Filters' : 'Hide Filters';
+    });
+
+    // Table filtering functionality
     document.getElementById('search').addEventListener('input', filterTable);
     document.getElementById('vendor').addEventListener('change', filterTable);
     document.getElementById('os').addEventListener('change', filterTable);
@@ -181,6 +198,7 @@
         });
     });
 
+    // Adjust scroll padding for fixed header
     document.addEventListener('DOMContentLoaded', function () {
         const height = Math.ceil(window.scrollY + document.querySelector('main').getBoundingClientRect().top);
         document.documentElement.style.scrollPaddingTop = `${height}px`;
