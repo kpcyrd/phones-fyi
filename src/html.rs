@@ -1,14 +1,15 @@
-use crate::{
-    errors::*,
-    hardware::{Device, Vendor},
-    rules::Detailed,
-};
+use crate::errors::*;
+use crate::hardware::{Device, Vendor};
+use crate::rules::Detailed;
 use serde_json::json;
-use std::{collections::BTreeMap, path::Path};
+use std::borrow::Cow;
+use std::collections::BTreeMap;
+use std::path::Path;
 use tokio::fs;
 
 pub struct Html {
     hbs: handlebars::Handlebars<'static>,
+    pub css_file: Cow<'static, str>,
 }
 
 impl Html {
@@ -25,7 +26,15 @@ impl Html {
             let data = fs::read_to_string(path).await?;
             hbs.register_partial(tpl, &data)?;
         }
-        Ok(Html { hbs })
+        Ok(Html {
+            hbs,
+            css_file: Cow::Borrowed("style.css"),
+        })
+    }
+
+    pub fn with_css_file(mut self, css: String) -> Self {
+        self.css_file = Cow::Owned(css);
+        self
     }
 
     fn render<T>(&self, name: &str, data: &T) -> Result<String>
@@ -47,6 +56,7 @@ impl Html {
         self.render(
             "index.html.hbs",
             &json!({
+                "css_file": self.css_file,
                 "vendors": vendors,
                 "devices": devices,
             }),
@@ -66,6 +76,7 @@ impl Html {
         self.render(
             "device.html.hbs",
             &json!({
+                "css_file": self.css_file,
                 "vendor": vendor,
                 "device": device,
             }),
