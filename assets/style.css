@@ -418,16 +418,19 @@ footer a:hover {
     margin: 2rem auto;
 }
 
-.device-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
+.device-details-section {
     background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 2rem;
     margin-bottom: 2rem;
+}
+
+.device-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 }
 
 .device-header-info {
@@ -469,14 +472,6 @@ footer a:hover {
     object-fit: contain;
     border-radius: 8px;
     filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-}
-
-.security-overview {
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 2rem;
 }
 
 .features-grid {

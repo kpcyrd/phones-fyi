@@ -2,7 +2,7 @@
 {{~#*inline "page_description"}}Check hardware security features for {{vendor}} {{device.name}} ({{device.codename}}): Secure boot, hardware keystore, BFU/AFU security status, and current security support.{{/inline~}}
 {{~#*inline "page"~}}
 <section class="device-details">
-    <div class="device-header">
+    <div class="device-details-section device-header">
         <div class="device-header-info">
             <h1>{{vendor}} {{device.name}}</h1>
             <p class="device-meta">
@@ -23,7 +23,7 @@
         {{/if}}
     </div>
 
-    <div class="security-overview">
+    <div class="device-details-section">
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-header">
@@ -85,6 +85,16 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="device-details-section">
+        <script src="https://utteranc.es/client.js"
+                repo="kpcyrd/phones-fyi"
+                issue-term="pathname"
+                theme="github-dark"
+                crossorigin="anonymous"
+                async>
+        </script>
     </div>
 
     <div class="nav-actions">
