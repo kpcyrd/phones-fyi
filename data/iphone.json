@@ -1,0 +1,359 @@
+[
+  {
+    "codename": "iphone-17",
+    "name": "iPhone 17",
+    "vendor_id": "apple",
+    "release_date": "2025-09-19",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-17-air",
+    "name": "iPhone 17 Air",
+    "vendor_id": "apple",
+    "release_date": "2025-09-19",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-17-pro",
+    "name": "iPhone 17 Pro",
+    "vendor_id": "apple",
+    "release_date": "2025-09-19",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-17-pro-max",
+    "name": "iPhone 17 Pro Max",
+    "vendor_id": "apple",
+    "release_date": "2025-09-19",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-16e",
+    "name": "iPhone 16e",
+    "vendor_id": "apple",
+    "release_date": "2025-02-28",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-16",
+    "name": "iPhone 16",
+    "vendor_id": "apple",
+    "release_date": "2024-09-20",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-16-plus",
+    "name": "iPhone 16 Plus",
+    "vendor_id": "apple",
+    "release_date": "2024-09-20",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-16-pro",
+    "name": "iPhone 16 Pro",
+    "vendor_id": "apple",
+    "release_date": "2024-09-20",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-16-pro-max",
+    "name": "iPhone 16 Pro Max",
+    "vendor_id": "apple",
+    "release_date": "2024-09-20",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-15",
+    "name": "iPhone 15",
+    "vendor_id": "apple",
+    "release_date": "2023-09-22",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-15-plus",
+    "name": "iPhone 15 Plus",
+    "vendor_id": "apple",
+    "release_date": "2023-09-22",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-15-pro",
+    "name": "iPhone 15 Pro",
+    "vendor_id": "apple",
+    "release_date": "2023-09-22",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-15-pro-max",
+    "name": "iPhone 15 Pro Max",
+    "vendor_id": "apple",
+    "release_date": "2023-09-22",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-14-plus",
+    "name": "iPhone 14 Plus",
+    "vendor_id": "apple",
+    "release_date": "2022-10-07",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-14",
+    "name": "iPhone 14",
+    "vendor_id": "apple",
+    "release_date": "2022-09-16",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-14-pro",
+    "name": "iPhone 14 Pro",
+    "vendor_id": "apple",
+    "release_date": "2022-09-16",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-14-pro-max",
+    "name": "iPhone 14 Pro Max",
+    "vendor_id": "apple",
+    "release_date": "2022-09-16",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-se-(3rd-generation)",
+    "name": "iPhone SE (3rd generation)",
+    "vendor_id": "apple",
+    "release_date": "2022-03-18",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-13",
+    "name": "iPhone 13",
+    "vendor_id": "apple",
+    "release_date": "2021-09-24",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-13-mini",
+    "name": "iPhone 13 Mini",
+    "vendor_id": "apple",
+    "release_date": "2021-09-24",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-13-pro",
+    "name": "iPhone 13 Pro",
+    "vendor_id": "apple",
+    "release_date": "2021-09-24",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-13-pro-max",
+    "name": "iPhone 13 Pro Max",
+    "vendor_id": "apple",
+    "release_date": "2021-09-24",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-12-mini",
+    "name": "iPhone 12 Mini",
+    "vendor_id": "apple",
+    "release_date": "2020-11-13",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-12-pro-max",
+    "name": "iPhone 12 Pro Max",
+    "vendor_id": "apple",
+    "release_date": "2020-11-13",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-12",
+    "name": "iPhone 12",
+    "vendor_id": "apple",
+    "release_date": "2020-10-23",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-12-pro",
+    "name": "iPhone 12 Pro",
+    "vendor_id": "apple",
+    "release_date": "2020-10-23",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-se-(2nd-generation)",
+    "name": "iPhone SE (2nd generation)",
+    "vendor_id": "apple",
+    "release_date": "2020-04-24",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-11",
+    "name": "iPhone 11",
+    "vendor_id": "apple",
+    "release_date": "2019-09-20",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-11-pro",
+    "name": "iPhone 11 Pro",
+    "vendor_id": "apple",
+    "release_date": "2019-09-20",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-11-pro-max",
+    "name": "iPhone 11 Pro Max",
+    "vendor_id": "apple",
+    "release_date": "2019-09-20",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-xr",
+    "name": "iPhone XR",
+    "vendor_id": "apple",
+    "release_date": "2018-10-26",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-xs",
+    "name": "iPhone XS",
+    "vendor_id": "apple",
+    "release_date": "2018-09-21",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-xs-max",
+    "name": "iPhone XS Max",
+    "vendor_id": "apple",
+    "release_date": "2018-09-21",
+    "security_support": true
+  },
+  {
+    "codename": "iphone-8",
+    "name": "iPhone 8",
+    "vendor_id": "apple",
+    "release_date": "2017-09-22",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-8-plus",
+    "name": "iPhone 8 Plus",
+    "vendor_id": "apple",
+    "release_date": "2017-09-22",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-x",
+    "name": "iPhone X",
+    "vendor_id": "apple",
+    "release_date": "2017-09-12",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-7",
+    "name": "iPhone 7",
+    "vendor_id": "apple",
+    "release_date": "2016-09-16",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-7-plus",
+    "name": "iPhone 7 Plus",
+    "vendor_id": "apple",
+    "release_date": "2016-09-16",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-se-(1st-generation)",
+    "name": "iPhone SE (1st generation)",
+    "vendor_id": "apple",
+    "release_date": "2016-03-31",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-6s",
+    "name": "iPhone 6S",
+    "vendor_id": "apple",
+    "release_date": "2015-09-25",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-6s-plus",
+    "name": "iPhone 6S Plus",
+    "vendor_id": "apple",
+    "release_date": "2015-09-25",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-6",
+    "name": "iPhone 6",
+    "vendor_id": "apple",
+    "release_date": "2014-09-25",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-6-plus",
+    "name": "iPhone 6 Plus",
+    "vendor_id": "apple",
+    "release_date": "2014-09-25",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-5c",
+    "name": "iPhone 5C",
+    "vendor_id": "apple",
+    "release_date": "2013-09-20",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-5s",
+    "name": "iPhone 5S",
+    "vendor_id": "apple",
+    "release_date": "2013-09-20",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-5",
+    "name": "iPhone 5",
+    "vendor_id": "apple",
+    "release_date": "2012-09-21",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-4s",
+    "name": "iPhone 4S",
+    "vendor_id": "apple",
+    "release_date": "2011-10-14",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-4",
+    "name": "iPhone 4",
+    "vendor_id": "apple",
+    "release_date": "2010-06-24",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-3gs",
+    "name": "iPhone 3GS",
+    "vendor_id": "apple",
+    "release_date": "2009-06-19",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-3g",
+    "name": "iPhone 3G",
+    "vendor_id": "apple",
+    "release_date": "2008-07-11",
+    "security_support": false
+  },
+  {
+    "codename": "iphone-1",
+    "name": "iPhone 1",
+    "vendor_id": "apple",
+    "release_date": "2007-06-29",
+    "security_support": false
+  }
+]

@@ -1,0 +1,1647 @@
+[
+  {
+    "codename": "Z01R",
+    "name": "Zenfone 5Z (ZS620KL)",
+    "vendor_id": "asus",
+    "release_date": "2018-06",
+    "security_support": true
+  },
+  {
+    "codename": "sake",
+    "name": "ZenFone 8",
+    "vendor_id": "asus",
+    "release_date": "2021-05",
+    "security_support": true
+  },
+  {
+    "codename": "mata",
+    "name": "PH-1",
+    "vendor_id": "essential",
+    "release_date": "2017-08",
+    "security_support": true
+  },
+  {
+    "codename": "pro1",
+    "name": "Pro¹",
+    "vendor_id": "f-x-tec",
+    "release_date": "2019-10",
+    "security_support": true
+  },
+  {
+    "codename": "pro1x",
+    "name": "Pro¹ X",
+    "vendor_id": "f-x-tec",
+    "release_date": "2022-12",
+    "security_support": true
+  },
+  {
+    "codename": "FP3",
+    "name": "Fairphone 3",
+    "vendor_id": "fairphone",
+    "release_date": "2019-09",
+    "security_support": true
+  },
+  {
+    "codename": "FP4",
+    "name": "Fairphone 4",
+    "vendor_id": "fairphone",
+    "release_date": "2021-10",
+    "security_support": true
+  },
+  {
+    "codename": "FP5",
+    "name": "Fairphone 5",
+    "vendor_id": "fairphone",
+    "release_date": "2023-08",
+    "security_support": true
+  },
+  {
+    "codename": "sailfish",
+    "name": "Pixel",
+    "vendor_id": "google",
+    "release_date": "2016-10",
+    "security_support": true
+  },
+  {
+    "codename": "walleye",
+    "name": "Pixel 2",
+    "vendor_id": "google",
+    "release_date": "2017-10",
+    "security_support": true
+  },
+  {
+    "codename": "taimen",
+    "name": "Pixel 2 XL",
+    "vendor_id": "google",
+    "release_date": "2017-10",
+    "security_support": true
+  },
+  {
+    "codename": "blueline",
+    "name": "Pixel 3",
+    "vendor_id": "google",
+    "release_date": "2018-10",
+    "security_support": true
+  },
+  {
+    "codename": "crosshatch",
+    "name": "Pixel 3 XL",
+    "vendor_id": "google",
+    "release_date": "2018-10",
+    "security_support": true
+  },
+  {
+    "codename": "sargo",
+    "name": "Pixel 3a",
+    "vendor_id": "google",
+    "release_date": "2019-04",
+    "security_support": true
+  },
+  {
+    "codename": "bonito",
+    "name": "Pixel 3a XL",
+    "vendor_id": "google",
+    "release_date": "2019-04",
+    "security_support": true
+  },
+  {
+    "codename": "flame",
+    "name": "Pixel 4",
+    "vendor_id": "google",
+    "release_date": "2019-09",
+    "security_support": true
+  },
+  {
+    "codename": "coral",
+    "name": "Pixel 4 XL",
+    "vendor_id": "google",
+    "release_date": "2019-09",
+    "security_support": true
+  },
+  {
+    "codename": "sunfish",
+    "name": "Pixel 4a",
+    "vendor_id": "google",
+    "release_date": "2020-08",
+    "security_support": true
+  },
+  {
+    "codename": "bramble",
+    "name": "Pixel 4a 5G",
+    "vendor_id": "google",
+    "release_date": "2020-10",
+    "security_support": true
+  },
+  {
+    "codename": "redfin",
+    "name": "Pixel 5",
+    "vendor_id": "google",
+    "release_date": "2020-10",
+    "security_support": true
+  },
+  {
+    "codename": "barbet",
+    "name": "Pixel 5a",
+    "vendor_id": "google",
+    "release_date": "2021-08",
+    "security_support": true
+  },
+  {
+    "codename": "oriole",
+    "name": "Pixel 6",
+    "vendor_id": "google",
+    "release_date": "2021-10-19",
+    "security_support": true
+  },
+  {
+    "codename": "raven",
+    "name": "Pixel 6 Pro",
+    "vendor_id": "google",
+    "release_date": "2021-10-19",
+    "security_support": true
+  },
+  {
+    "codename": "bluejay",
+    "name": "Pixel 6a",
+    "vendor_id": "google",
+    "release_date": "2022-07",
+    "security_support": true
+  },
+  {
+    "codename": "panther",
+    "name": "Pixel 7",
+    "vendor_id": "google",
+    "release_date": "2022-10-13",
+    "security_support": true
+  },
+  {
+    "codename": "cheetah",
+    "name": "Pixel 7 Pro",
+    "vendor_id": "google",
+    "release_date": "2022-10-13",
+    "security_support": true
+  },
+  {
+    "codename": "lynx",
+    "name": "Pixel 7a",
+    "vendor_id": "google",
+    "release_date": "2023-05-10",
+    "security_support": true
+  },
+  {
+    "codename": "shiba",
+    "name": "Pixel 8",
+    "vendor_id": "google",
+    "release_date": "2023-10-04",
+    "security_support": true
+  },
+  {
+    "codename": "husky",
+    "name": "Pixel 8 Pro",
+    "vendor_id": "google",
+    "release_date": "2023-10-04",
+    "security_support": true
+  },
+  {
+    "codename": "akita",
+    "name": "Pixel 8a",
+    "vendor_id": "google",
+    "release_date": "2024-05-07",
+    "security_support": true
+  },
+  {
+    "codename": "tokay",
+    "name": "Pixel 9",
+    "vendor_id": "google",
+    "release_date": "2024-08-22",
+    "security_support": true
+  },
+  {
+    "codename": "caiman",
+    "name": "Pixel 9 Pro",
+    "vendor_id": "google",
+    "release_date": "2024-09-09",
+    "security_support": true
+  },
+  {
+    "codename": "comet",
+    "name": "Pixel 9 Pro Fold",
+    "vendor_id": "google",
+    "release_date": "2024-09-04",
+    "security_support": true
+  },
+  {
+    "codename": "komodo",
+    "name": "Pixel 9 Pro XL",
+    "vendor_id": "google",
+    "release_date": "2024-08-22",
+    "security_support": true
+  },
+  {
+    "codename": "tegu",
+    "name": "Pixel 9a",
+    "vendor_id": "google",
+    "release_date": "2025-04-10",
+    "security_support": true
+  },
+  {
+    "codename": "felix",
+    "name": "Pixel Fold",
+    "vendor_id": "google",
+    "release_date": "2023-06-27",
+    "security_support": true
+  },
+  {
+    "codename": "marlin",
+    "name": "Pixel XL",
+    "vendor_id": "google",
+    "release_date": "2016-10",
+    "security_support": true
+  },
+  {
+    "codename": "heart",
+    "name": "Z5 Pro GT",
+    "vendor_id": "lenovo",
+    "release_date": "2019-01-29",
+    "security_support": true
+  },
+  {
+    "codename": "zippo",
+    "name": "Z6 Pro",
+    "vendor_id": "lenovo",
+    "release_date": "2019-09-11",
+    "security_support": true
+  },
+  {
+    "codename": "judyln",
+    "name": "G7 ThinQ (G710AWM/EM/EMW)",
+    "vendor_id": "lg",
+    "release_date": "2018-05-02",
+    "security_support": true
+  },
+  {
+    "codename": "g710n",
+    "name": "G7 ThinQ (G710N)",
+    "vendor_id": "lg",
+    "release_date": "2018-05-02",
+    "security_support": true
+  },
+  {
+    "codename": "g710ulm",
+    "name": "G7 ThinQ (G710ULM/VMX)",
+    "vendor_id": "lg",
+    "release_date": "2018-05-02",
+    "security_support": true
+  },
+  {
+    "codename": "style3lm",
+    "name": "Style3",
+    "vendor_id": "lg",
+    "release_date": "2020-06-25",
+    "security_support": true
+  },
+  {
+    "codename": "l01k",
+    "name": "V30 (Japan)",
+    "vendor_id": "lg",
+    "release_date": "2017-08",
+    "security_support": true
+  },
+  {
+    "codename": "joan",
+    "name": "V30 (Unlocked)",
+    "vendor_id": "lg",
+    "release_date": "2017-08",
+    "security_support": true
+  },
+  {
+    "codename": "judyp",
+    "name": "V35 ThinQ",
+    "vendor_id": "lg",
+    "release_date": "2018-05-30",
+    "security_support": true
+  },
+  {
+    "codename": "judypn",
+    "name": "V40 ThinQ",
+    "vendor_id": "lg",
+    "release_date": "2018-10-03",
+    "security_support": true
+  },
+  {
+    "codename": "timelm",
+    "name": "V60 ThinQ",
+    "vendor_id": "lg",
+    "release_date": "2020-03",
+    "security_support": true
+  },
+  {
+    "codename": "caymanslm",
+    "name": "Velvet",
+    "vendor_id": "lg",
+    "release_date": "2020",
+    "security_support": true
+  },
+  {
+    "codename": "bathena",
+    "name": "defy 2021",
+    "vendor_id": "motorola",
+    "release_date": "2021-06",
+    "security_support": true
+  },
+  {
+    "codename": "berlin",
+    "name": "edge 20",
+    "vendor_id": "motorola",
+    "release_date": "2021-07-29",
+    "security_support": true
+  },
+  {
+    "codename": "pstar",
+    "name": "edge 20 pro",
+    "vendor_id": "motorola",
+    "release_date": "2021-08",
+    "security_support": true
+  },
+  {
+    "codename": "berlna",
+    "name": "edge 2021",
+    "vendor_id": "motorola",
+    "release_date": "2021-08-19",
+    "security_support": true
+  },
+  {
+    "codename": "avatrn",
+    "name": "edge 2024",
+    "vendor_id": "motorola",
+    "release_date": "2024-06",
+    "security_support": true
+  },
+  {
+    "codename": "dubai",
+    "name": "edge 30",
+    "vendor_id": "motorola",
+    "release_date": "2022-05",
+    "security_support": true
+  },
+  {
+    "codename": "tundra",
+    "name": "edge 30 fusion",
+    "vendor_id": "motorola",
+    "release_date": "2022-09",
+    "security_support": true
+  },
+  {
+    "codename": "miami",
+    "name": "edge 30 neo",
+    "vendor_id": "motorola",
+    "release_date": "2022-10-07",
+    "security_support": true
+  },
+  {
+    "codename": "eqs",
+    "name": "edge 30 ultra",
+    "vendor_id": "motorola",
+    "release_date": "2022-09",
+    "security_support": true
+  },
+  {
+    "codename": "rtwo",
+    "name": "edge 40 pro",
+    "vendor_id": "motorola",
+    "release_date": "2023-05",
+    "security_support": true
+  },
+  {
+    "codename": "nio",
+    "name": "edge s",
+    "vendor_id": "motorola",
+    "release_date": "2021-02",
+    "security_support": true
+  },
+  {
+    "codename": "guam",
+    "name": "moto e7 plus",
+    "vendor_id": "motorola",
+    "release_date": "2020-09-16",
+    "security_support": true
+  },
+  {
+    "codename": "kiev",
+    "name": "moto g 5G",
+    "vendor_id": "motorola",
+    "release_date": "2020-05",
+    "security_support": true
+  },
+  {
+    "codename": "fogo",
+    "name": "moto g 5G - 2024",
+    "vendor_id": "motorola",
+    "release_date": "2024-03-21",
+    "security_support": true
+  },
+  {
+    "codename": "nairo",
+    "name": "moto g 5G plus",
+    "vendor_id": "motorola",
+    "release_date": "2020-05",
+    "security_support": true
+  },
+  {
+    "codename": "borneo",
+    "name": "moto g power 2021",
+    "vendor_id": "motorola",
+    "release_date": "2021-01",
+    "security_support": true
+  },
+  {
+    "codename": "denver",
+    "name": "moto g stylus 5G",
+    "vendor_id": "motorola",
+    "release_date": "2021-06-14",
+    "security_support": true
+  },
+  {
+    "codename": "milanf",
+    "name": "moto g stylus 5G (2022)",
+    "vendor_id": "motorola",
+    "release_date": "2022-04-27",
+    "security_support": true
+  },
+  {
+    "codename": "capri",
+    "name": "moto g10",
+    "vendor_id": "motorola",
+    "release_date": "2021-06",
+    "security_support": true
+  },
+  {
+    "codename": "xpeng",
+    "name": "moto g200 5G",
+    "vendor_id": "motorola",
+    "release_date": "2021-12",
+    "security_support": true
+  },
+  {
+    "codename": "caprip",
+    "name": "moto g30",
+    "vendor_id": "motorola",
+    "release_date": "2021-03",
+    "security_support": true
+  },
+  {
+    "codename": "devon",
+    "name": "moto g32",
+    "vendor_id": "motorola",
+    "release_date": "2022-08",
+    "security_support": true
+  },
+  {
+    "codename": "fogos",
+    "name": "moto g34 5G",
+    "vendor_id": "motorola",
+    "release_date": "2024-08-28",
+    "security_support": true
+  },
+  {
+    "codename": "hawao",
+    "name": "moto g42",
+    "vendor_id": "motorola",
+    "release_date": "2022-06",
+    "security_support": true
+  },
+  {
+    "codename": "rhode",
+    "name": "moto g52",
+    "vendor_id": "motorola",
+    "release_date": "2022-04",
+    "security_support": true
+  },
+  {
+    "codename": "evert",
+    "name": "moto g6 plus",
+    "vendor_id": "motorola",
+    "release_date": "2018-05",
+    "security_support": true
+  },
+  {
+    "codename": "river",
+    "name": "moto g7",
+    "vendor_id": "motorola",
+    "release_date": "2019-02",
+    "security_support": true
+  },
+  {
+    "codename": "channel",
+    "name": "moto g7 play",
+    "vendor_id": "motorola",
+    "release_date": "2019-03",
+    "security_support": true
+  },
+  {
+    "codename": "lake",
+    "name": "moto g7 plus",
+    "vendor_id": "motorola",
+    "release_date": "2019-02",
+    "security_support": true
+  },
+  {
+    "codename": "ocean",
+    "name": "moto g7 power",
+    "vendor_id": "motorola",
+    "release_date": "2019-02",
+    "security_support": true
+  },
+  {
+    "codename": "rhodep",
+    "name": "moto g82 5G",
+    "vendor_id": "motorola",
+    "release_date": "2022-06-07",
+    "security_support": true
+  },
+  {
+    "codename": "bangkk",
+    "name": "moto g84 5G",
+    "vendor_id": "motorola",
+    "release_date": "2023-09-08",
+    "security_support": true
+  },
+  {
+    "codename": "guamp",
+    "name": "moto g9 play",
+    "vendor_id": "motorola",
+    "release_date": "2020-08",
+    "security_support": true
+  },
+  {
+    "codename": "cebu",
+    "name": "moto g9 power",
+    "vendor_id": "motorola",
+    "release_date": "2020-11",
+    "security_support": true
+  },
+  {
+    "codename": "payton",
+    "name": "moto x4",
+    "vendor_id": "motorola",
+    "release_date": "2017-10",
+    "security_support": true
+  },
+  {
+    "codename": "nash",
+    "name": "moto z2 force",
+    "vendor_id": "motorola",
+    "release_date": "2017-07",
+    "security_support": true
+  },
+  {
+    "codename": "messi",
+    "name": "moto z3",
+    "vendor_id": "motorola",
+    "release_date": "2018-08",
+    "security_support": true
+  },
+  {
+    "codename": "beckham",
+    "name": "moto z3 play",
+    "vendor_id": "motorola",
+    "release_date": "2018-06",
+    "security_support": true
+  },
+  {
+    "codename": "troika",
+    "name": "one action",
+    "vendor_id": "motorola",
+    "release_date": "2019-10-31",
+    "security_support": true
+  },
+  {
+    "codename": "kane",
+    "name": "one vision",
+    "vendor_id": "motorola",
+    "release_date": "2019-05-15",
+    "security_support": true
+  },
+  {
+    "codename": "bronco",
+    "name": "ThinkPhone by motorola",
+    "vendor_id": "motorola",
+    "release_date": "2023-01",
+    "security_support": true
+  },
+  {
+    "codename": "PL2",
+    "name": "Nokia 6.1 (2018)",
+    "vendor_id": "nokia",
+    "release_date": "2018",
+    "security_support": true
+  },
+  {
+    "codename": "B2N",
+    "name": "Nokia 7 plus",
+    "vendor_id": "nokia",
+    "release_date": "2018-04-30",
+    "security_support": true
+  },
+  {
+    "codename": "NB1",
+    "name": "Nokia 8",
+    "vendor_id": "nokia",
+    "release_date": "2017-08-16",
+    "security_support": true
+  },
+  {
+    "codename": "Spacewar",
+    "name": "Phone (1)",
+    "vendor_id": "nothing",
+    "release_date": "2022-07-12",
+    "security_support": true
+  },
+  {
+    "codename": "Pong",
+    "name": "Phone (2)",
+    "vendor_id": "nothing",
+    "release_date": "2023-07-11",
+    "security_support": true
+  },
+  {
+    "codename": "TP1803",
+    "name": "Mini 5G",
+    "vendor_id": "nubia",
+    "release_date": "2019",
+    "security_support": true
+  },
+  {
+    "codename": "nx659j",
+    "name": "Red Magic 5G (Global)",
+    "vendor_id": "nubia",
+    "release_date": "2020-08",
+    "security_support": true
+  },
+  {
+    "codename": "nx619j",
+    "name": "Red Magic Mars",
+    "vendor_id": "nubia",
+    "release_date": "2018-12",
+    "security_support": true
+  },
+  {
+    "codename": "nx616j",
+    "name": "X",
+    "vendor_id": "nubia",
+    "release_date": "2018-11",
+    "security_support": true
+  },
+  {
+    "codename": "nx563j",
+    "name": "Z17",
+    "vendor_id": "nubia",
+    "release_date": "2017-06",
+    "security_support": true
+  },
+  {
+    "codename": "nx606j",
+    "name": "Z18",
+    "vendor_id": "nubia",
+    "release_date": "2018-09",
+    "security_support": true
+  },
+  {
+    "codename": "salami",
+    "name": "OnePlus 11 5G",
+    "vendor_id": "oneplus",
+    "release_date": "2023-01",
+    "security_support": true
+  },
+  {
+    "codename": "waffle",
+    "name": "OnePlus 12",
+    "vendor_id": "oneplus",
+    "release_date": "2023-12",
+    "security_support": true
+  },
+  {
+    "codename": "aston",
+    "name": "OnePlus 12R",
+    "vendor_id": "oneplus",
+    "release_date": "2024-01",
+    "security_support": true
+  },
+  {
+    "codename": "dodge",
+    "name": "OnePlus 13",
+    "vendor_id": "oneplus",
+    "release_date": "2025-01",
+    "security_support": true
+  },
+  {
+    "codename": "giulia",
+    "name": "OnePlus 13R",
+    "vendor_id": "oneplus",
+    "release_date": "2025-01",
+    "security_support": true
+  },
+  {
+    "codename": "cheeseburger",
+    "name": "OnePlus 5",
+    "vendor_id": "oneplus",
+    "release_date": "2017-06",
+    "security_support": true
+  },
+  {
+    "codename": "dumpling",
+    "name": "OnePlus 5T",
+    "vendor_id": "oneplus",
+    "release_date": "2017-11",
+    "security_support": true
+  },
+  {
+    "codename": "enchilada",
+    "name": "OnePlus 6",
+    "vendor_id": "oneplus",
+    "release_date": "2018-04",
+    "security_support": true
+  },
+  {
+    "codename": "fajita",
+    "name": "OnePlus 6T",
+    "vendor_id": "oneplus",
+    "release_date": "2018-11",
+    "security_support": true
+  },
+  {
+    "codename": "guacamoleb",
+    "name": "OnePlus 7",
+    "vendor_id": "oneplus",
+    "release_date": "2019-05",
+    "security_support": true
+  },
+  {
+    "codename": "guacamole",
+    "name": "OnePlus 7 Pro",
+    "vendor_id": "oneplus",
+    "release_date": "2019-05",
+    "security_support": true
+  },
+  {
+    "codename": "hotdogb",
+    "name": "OnePlus 7T",
+    "vendor_id": "oneplus",
+    "release_date": "2019-09",
+    "security_support": true
+  },
+  {
+    "codename": "hotdog",
+    "name": "OnePlus 7T Pro",
+    "vendor_id": "oneplus",
+    "release_date": "2019-10",
+    "security_support": true
+  },
+  {
+    "codename": "instantnoodle",
+    "name": "OnePlus 8",
+    "vendor_id": "oneplus",
+    "release_date": "2020-04",
+    "security_support": true
+  },
+  {
+    "codename": "instantnoodlep",
+    "name": "OnePlus 8 Pro",
+    "vendor_id": "oneplus",
+    "release_date": "2020-04",
+    "security_support": true
+  },
+  {
+    "codename": "kebab",
+    "name": "OnePlus 8T",
+    "vendor_id": "oneplus",
+    "release_date": "2020-10",
+    "security_support": true
+  },
+  {
+    "codename": "lemonade",
+    "name": "OnePlus 9",
+    "vendor_id": "oneplus",
+    "release_date": "2021-03",
+    "security_support": true
+  },
+  {
+    "codename": "lemonadep",
+    "name": "OnePlus 9 Pro",
+    "vendor_id": "oneplus",
+    "release_date": "2021-03",
+    "security_support": true
+  },
+  {
+    "codename": "lemonades",
+    "name": "OnePlus 9R",
+    "vendor_id": "oneplus",
+    "release_date": "2021-04",
+    "security_support": true
+  },
+  {
+    "codename": "martini",
+    "name": "OnePlus 9RT",
+    "vendor_id": "oneplus",
+    "release_date": "2021-10",
+    "security_support": true
+  },
+  {
+    "codename": "astonc",
+    "name": "OnePlus Ace 3",
+    "vendor_id": "oneplus",
+    "release_date": "2024-01",
+    "security_support": true
+  },
+  {
+    "codename": "corvette",
+    "name": "OnePlus Ace 3 Pro",
+    "vendor_id": "oneplus",
+    "release_date": "2024-06",
+    "security_support": true
+  },
+  {
+    "codename": "audi",
+    "name": "OnePlus Ace 3V",
+    "vendor_id": "oneplus",
+    "release_date": "2024-03",
+    "security_support": true
+  },
+  {
+    "codename": "giuliac",
+    "name": "OnePlus Ace 5",
+    "vendor_id": "oneplus",
+    "release_date": "2024-12",
+    "security_support": true
+  },
+  {
+    "codename": "avalon",
+    "name": "OnePlus Nord 4",
+    "vendor_id": "oneplus",
+    "release_date": "2024-07",
+    "security_support": true
+  },
+  {
+    "codename": "lexus",
+    "name": "OnePlus Nord 5",
+    "vendor_id": "oneplus",
+    "release_date": "2025-07",
+    "security_support": true
+  },
+  {
+    "codename": "oscaro",
+    "name": "OnePlus Nord CE 2 Lite 5G",
+    "vendor_id": "oneplus",
+    "release_date": "2022-04-30",
+    "security_support": true
+  },
+  {
+    "codename": "larry",
+    "name": "OnePlus Nord CE 3 Lite 5G",
+    "vendor_id": "oneplus",
+    "release_date": "2023-06-08",
+    "security_support": true
+  },
+  {
+    "codename": "benz",
+    "name": "OnePlus Nord CE4",
+    "vendor_id": "oneplus",
+    "release_date": "2024-04",
+    "security_support": true
+  },
+  {
+    "codename": "gunnar",
+    "name": "OnePlus Nord N20",
+    "vendor_id": "oneplus",
+    "release_date": "2022-04-28",
+    "security_support": true
+  },
+  {
+    "codename": "dre",
+    "name": "OnePlus Nord N200",
+    "vendor_id": "oneplus",
+    "release_date": "2021-06-21",
+    "security_support": true
+  },
+  {
+    "codename": "caihong",
+    "name": "OnePlus Pad Pro",
+    "vendor_id": "oneplus",
+    "release_date": "2024-07",
+    "security_support": true
+  },
+  {
+    "codename": "cheryl",
+    "name": "Phone",
+    "vendor_id": "razer",
+    "release_date": "2017-11",
+    "security_support": true
+  },
+  {
+    "codename": "aura",
+    "name": "Phone 2",
+    "vendor_id": "razer",
+    "release_date": "2018-10",
+    "security_support": true
+  },
+  {
+    "codename": "luigi",
+    "name": "Realme 10 Pro 5G",
+    "vendor_id": "realme",
+    "release_date": "2022-11-24",
+    "security_support": true
+  },
+  {
+    "codename": "oscar",
+    "name": "Realme 9 Pro 5G",
+    "vendor_id": "realme",
+    "release_date": "2022-04-28",
+    "security_support": true
+  },
+  {
+    "codename": "a21s",
+    "name": "Galaxy A21s",
+    "vendor_id": "samsung",
+    "release_date": "2020",
+    "security_support": true
+  },
+  {
+    "codename": "a52q",
+    "name": "Galaxy A52 4G",
+    "vendor_id": "samsung",
+    "release_date": "2021",
+    "security_support": true
+  },
+  {
+    "codename": "a52sxq",
+    "name": "Galaxy A52s 5G",
+    "vendor_id": "samsung",
+    "release_date": "2021",
+    "security_support": true
+  },
+  {
+    "codename": "a71",
+    "name": "Galaxy A71",
+    "vendor_id": "samsung",
+    "release_date": "2020-01-17",
+    "security_support": true
+  },
+  {
+    "codename": "a72q",
+    "name": "Galaxy A72",
+    "vendor_id": "samsung",
+    "release_date": "2021",
+    "security_support": true
+  },
+  {
+    "codename": "a73xq",
+    "name": "Galaxy A73 5G",
+    "vendor_id": "samsung",
+    "release_date": "2022",
+    "security_support": true
+  },
+  {
+    "codename": "f62",
+    "name": "Galaxy F62",
+    "vendor_id": "samsung",
+    "release_date": "2021-03-03",
+    "security_support": true
+  },
+  {
+    "codename": "m52xq",
+    "name": "Galaxy M52 5G",
+    "vendor_id": "samsung",
+    "release_date": "2021",
+    "security_support": true
+  },
+  {
+    "codename": "d1",
+    "name": "Galaxy Note10",
+    "vendor_id": "samsung",
+    "release_date": "2019-08-23",
+    "security_support": true
+  },
+  {
+    "codename": "d1x",
+    "name": "Galaxy Note10 5G",
+    "vendor_id": "samsung",
+    "release_date": "2019-08-23",
+    "security_support": true
+  },
+  {
+    "codename": "d2s",
+    "name": "Galaxy Note10+",
+    "vendor_id": "samsung",
+    "release_date": "2019-08-23",
+    "security_support": true
+  },
+  {
+    "codename": "d2x",
+    "name": "Galaxy Note10+ 5G",
+    "vendor_id": "samsung",
+    "release_date": "2019-08-23",
+    "security_support": true
+  },
+  {
+    "codename": "beyond1lte",
+    "name": "Galaxy S10",
+    "vendor_id": "samsung",
+    "release_date": "2019-03-08",
+    "security_support": true
+  },
+  {
+    "codename": "beyondx",
+    "name": "Galaxy S10 5G",
+    "vendor_id": "samsung",
+    "release_date": "2019-03-08",
+    "security_support": true
+  },
+  {
+    "codename": "beyond2lte",
+    "name": "Galaxy S10+",
+    "vendor_id": "samsung",
+    "release_date": "2019-03-08",
+    "security_support": true
+  },
+  {
+    "codename": "beyond0lte",
+    "name": "Galaxy S10e",
+    "vendor_id": "samsung",
+    "release_date": "2019-03-08",
+    "security_support": true
+  },
+  {
+    "codename": "x1s",
+    "name": "Galaxy S20 (4G/5G)",
+    "vendor_id": "samsung",
+    "release_date": "2020-03-06",
+    "security_support": true
+  },
+  {
+    "codename": "r8s",
+    "name": "Galaxy S20 FE (Exynos)",
+    "vendor_id": "samsung",
+    "release_date": "2020-10-02",
+    "security_support": true
+  },
+  {
+    "codename": "r8q",
+    "name": "Galaxy S20 FE (Snapdragon)",
+    "vendor_id": "samsung",
+    "release_date": "2020-10-02",
+    "security_support": true
+  },
+  {
+    "codename": "z3s",
+    "name": "Galaxy S20 Ultra (5G)",
+    "vendor_id": "samsung",
+    "release_date": "2020-03-06",
+    "security_support": true
+  },
+  {
+    "codename": "y2s",
+    "name": "Galaxy S20+ (4G/5G)",
+    "vendor_id": "samsung",
+    "release_date": "2020-03-06",
+    "security_support": true
+  },
+  {
+    "codename": "gta4xlswifi",
+    "name": "Galaxy Tab S6 Lite 2024 (Wi-Fi)",
+    "vendor_id": "samsung",
+    "release_date": "2024-03-28",
+    "security_support": true
+  },
+  {
+    "codename": "axolotl",
+    "name": "SHIFT6mq",
+    "vendor_id": "shift",
+    "release_date": "2020-06",
+    "security_support": true
+  },
+  {
+    "codename": "ingot",
+    "name": "Saga",
+    "vendor_id": "solana",
+    "release_date": "2023-05",
+    "security_support": true
+  },
+  {
+    "codename": "pdx203",
+    "name": "Xperia 1 II",
+    "vendor_id": "sony",
+    "release_date": "2020-05",
+    "security_support": true
+  },
+  {
+    "codename": "pdx215",
+    "name": "Xperia 1 III",
+    "vendor_id": "sony",
+    "release_date": "2021-04",
+    "security_support": true
+  },
+  {
+    "codename": "pdx223",
+    "name": "Xperia 1 IV",
+    "vendor_id": "sony",
+    "release_date": "2022-05-11",
+    "security_support": true
+  },
+  {
+    "codename": "pdx234",
+    "name": "Xperia 1 V",
+    "vendor_id": "sony",
+    "release_date": "2023-05",
+    "security_support": true
+  },
+  {
+    "codename": "kirin",
+    "name": "Xperia 10",
+    "vendor_id": "sony",
+    "release_date": "2019-02",
+    "security_support": true
+  },
+  {
+    "codename": "pdx225",
+    "name": "Xperia 10 IV",
+    "vendor_id": "sony",
+    "release_date": "2022-06-30",
+    "security_support": true
+  },
+  {
+    "codename": "mermaid",
+    "name": "Xperia 10 Plus",
+    "vendor_id": "sony",
+    "release_date": "2019-02",
+    "security_support": true
+  },
+  {
+    "codename": "pdx235",
+    "name": "Xperia 10 V",
+    "vendor_id": "sony",
+    "release_date": "2023-06-21",
+    "security_support": true
+  },
+  {
+    "codename": "pdx206",
+    "name": "Xperia 5 II",
+    "vendor_id": "sony",
+    "release_date": "2020-09",
+    "security_support": true
+  },
+  {
+    "codename": "pdx214",
+    "name": "Xperia 5 III",
+    "vendor_id": "sony",
+    "release_date": "2021-04",
+    "security_support": true
+  },
+  {
+    "codename": "pdx224",
+    "name": "Xperia 5 IV",
+    "vendor_id": "sony",
+    "release_date": "2022-09-01",
+    "security_support": true
+  },
+  {
+    "codename": "pdx237",
+    "name": "Xperia 5 V",
+    "vendor_id": "sony",
+    "release_date": "2023-09",
+    "security_support": true
+  },
+  {
+    "codename": "pioneer",
+    "name": "Xperia XA2",
+    "vendor_id": "sony",
+    "release_date": "2018-02",
+    "security_support": true
+  },
+  {
+    "codename": "voyager",
+    "name": "Xperia XA2 Plus",
+    "vendor_id": "sony",
+    "release_date": "2018-07",
+    "security_support": true
+  },
+  {
+    "codename": "discovery",
+    "name": "Xperia XA2 Ultra",
+    "vendor_id": "sony",
+    "release_date": "2018-02",
+    "security_support": true
+  },
+  {
+    "codename": "akari",
+    "name": "Xperia XZ2",
+    "vendor_id": "sony",
+    "release_date": "2018-04",
+    "security_support": true
+  },
+  {
+    "codename": "xz2c",
+    "name": "Xperia XZ2 Compact",
+    "vendor_id": "sony",
+    "release_date": "2018-04",
+    "security_support": true
+  },
+  {
+    "codename": "aurora",
+    "name": "Xperia XZ2 Premium",
+    "vendor_id": "sony",
+    "release_date": "2018-04",
+    "security_support": true
+  },
+  {
+    "codename": "akatsuki",
+    "name": "Xperia XZ3",
+    "vendor_id": "sony",
+    "release_date": "2018-10",
+    "security_support": true
+  },
+  {
+    "codename": "casuarina",
+    "name": "Joy 3",
+    "vendor_id": "vsmart",
+    "release_date": "2020-02-14",
+    "security_support": true
+  },
+  {
+    "codename": "lisa",
+    "name": "Xiaomi 11 Lite 5G NE",
+    "vendor_id": "xiaomi",
+    "release_date": "2021-12",
+    "security_support": true
+  },
+  {
+    "codename": "cupid",
+    "name": "Xiaomi 12",
+    "vendor_id": "xiaomi",
+    "release_date": "2021-12-31",
+    "security_support": true
+  },
+  {
+    "codename": "zeus",
+    "name": "Xiaomi 12 Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2021-12-31",
+    "security_support": true
+  },
+  {
+    "codename": "mayfly",
+    "name": "Xiaomi 12S",
+    "vendor_id": "xiaomi",
+    "release_date": "2022-07",
+    "security_support": true
+  },
+  {
+    "codename": "unicorn",
+    "name": "Xiaomi 12S Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2022-07-04",
+    "security_support": true
+  },
+  {
+    "codename": "thor",
+    "name": "Xiaomi 12S Ultra",
+    "vendor_id": "xiaomi",
+    "release_date": "2022-07-09",
+    "security_support": true
+  },
+  {
+    "codename": "diting",
+    "name": "Xiaomi 12T Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2022-08-25",
+    "security_support": true
+  },
+  {
+    "codename": "fuxi",
+    "name": "Xiaomi 13",
+    "vendor_id": "xiaomi",
+    "release_date": "2022-12-11",
+    "security_support": true
+  },
+  {
+    "codename": "nuwa",
+    "name": "Xiaomi 13 Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2022-12-11",
+    "security_support": true
+  },
+  {
+    "codename": "shark",
+    "name": "Black Shark",
+    "vendor_id": "xiaomi",
+    "release_date": "2018-04",
+    "security_support": true
+  },
+  {
+    "codename": "umi",
+    "name": "Mi 10",
+    "vendor_id": "xiaomi",
+    "release_date": "2020-02",
+    "security_support": true
+  },
+  {
+    "codename": "cmi",
+    "name": "Mi 10 Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2020-02",
+    "security_support": true
+  },
+  {
+    "codename": "thyme",
+    "name": "Mi 10S",
+    "vendor_id": "xiaomi",
+    "release_date": "2021-03",
+    "security_support": true
+  },
+  {
+    "codename": "apollon",
+    "name": "Mi 10T",
+    "vendor_id": "xiaomi",
+    "release_date": "2020-11",
+    "security_support": true
+  },
+  {
+    "codename": "gauguin",
+    "name": "Mi 10T Lite 5G",
+    "vendor_id": "xiaomi",
+    "release_date": "2020-12",
+    "security_support": true
+  },
+  {
+    "codename": "renoir",
+    "name": "Mi 11 Lite 5G",
+    "vendor_id": "xiaomi",
+    "release_date": "2021-03",
+    "security_support": true
+  },
+  {
+    "codename": "haydn",
+    "name": "Mi 11i",
+    "vendor_id": "xiaomi",
+    "release_date": "2021-05",
+    "security_support": true
+  },
+  {
+    "codename": "gemini",
+    "name": "Mi 5",
+    "vendor_id": "xiaomi",
+    "release_date": "2016-04",
+    "security_support": true
+  },
+  {
+    "codename": "natrium",
+    "name": "Mi 5s Plus",
+    "vendor_id": "xiaomi",
+    "release_date": "2016-10",
+    "security_support": true
+  },
+  {
+    "codename": "sagit",
+    "name": "Mi 6",
+    "vendor_id": "xiaomi",
+    "release_date": "2017-04",
+    "security_support": true
+  },
+  {
+    "codename": "dipper",
+    "name": "Mi 8",
+    "vendor_id": "xiaomi",
+    "release_date": "2018-07",
+    "security_support": true
+  },
+  {
+    "codename": "ursa",
+    "name": "Mi 8 Explorer Edition",
+    "vendor_id": "xiaomi",
+    "release_date": "2018-07",
+    "security_support": true
+  },
+  {
+    "codename": "equuleus",
+    "name": "Mi 8 Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2018-09",
+    "security_support": true
+  },
+  {
+    "codename": "grus",
+    "name": "Mi 9 SE",
+    "vendor_id": "xiaomi",
+    "release_date": "2019-02",
+    "security_support": true
+  },
+  {
+    "codename": "davinci",
+    "name": "Mi 9T",
+    "vendor_id": "xiaomi",
+    "release_date": "2019-06",
+    "security_support": true
+  },
+  {
+    "codename": "pyxis",
+    "name": "Mi CC9",
+    "vendor_id": "xiaomi",
+    "release_date": "2019-09",
+    "security_support": true
+  },
+  {
+    "codename": "vela",
+    "name": "Mi CC9 Meitu Edition",
+    "vendor_id": "xiaomi",
+    "release_date": "2019-07",
+    "security_support": true
+  },
+  {
+    "codename": "chiron",
+    "name": "Mi MIX 2",
+    "vendor_id": "xiaomi",
+    "release_date": "2017-09",
+    "security_support": true
+  },
+  {
+    "codename": "polaris",
+    "name": "Mi MIX 2S",
+    "vendor_id": "xiaomi",
+    "release_date": "2018-04",
+    "security_support": true
+  },
+  {
+    "codename": "perseus",
+    "name": "Mi MIX 3",
+    "vendor_id": "xiaomi",
+    "release_date": "2018-11",
+    "security_support": true
+  },
+  {
+    "codename": "tucana",
+    "name": "Mi Note 10",
+    "vendor_id": "xiaomi",
+    "release_date": "2019-11-11",
+    "security_support": true
+  },
+  {
+    "codename": "scorpio",
+    "name": "Mi Note 2",
+    "vendor_id": "xiaomi",
+    "release_date": "2016-11",
+    "security_support": true
+  },
+  {
+    "codename": "zizhan",
+    "name": "MIX Fold 2",
+    "vendor_id": "xiaomi",
+    "release_date": "2022-08-11",
+    "security_support": true
+  },
+  {
+    "codename": "beryllium",
+    "name": "POCO F1",
+    "vendor_id": "xiaomi",
+    "release_date": "2018-08",
+    "security_support": true
+  },
+  {
+    "codename": "lmi",
+    "name": "POCO F2 Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2020-03",
+    "security_support": true
+  },
+  {
+    "codename": "alioth",
+    "name": "POCO F3",
+    "vendor_id": "xiaomi",
+    "release_date": "2021-04",
+    "security_support": true
+  },
+  {
+    "codename": "munch",
+    "name": "POCO F4",
+    "vendor_id": "xiaomi",
+    "release_date": "2022-06",
+    "security_support": true
+  },
+  {
+    "codename": "marble",
+    "name": "POCO F5 (Global)",
+    "vendor_id": "xiaomi",
+    "release_date": "2023-03-28",
+    "security_support": true
+  },
+  {
+    "codename": "mondrian",
+    "name": "POCO F5 Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2022-12-27",
+    "security_support": true
+  },
+  {
+    "codename": "vermeer",
+    "name": "POCO F6 Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2023-11-29",
+    "security_support": true
+  },
+  {
+    "codename": "miatoll",
+    "name": "POCO M2 Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2021-10-02",
+    "security_support": true
+  },
+  {
+    "codename": "surya",
+    "name": "POCO X3 NFC",
+    "vendor_id": "xiaomi",
+    "release_date": "2020-09-08",
+    "security_support": true
+  },
+  {
+    "codename": "vayu",
+    "name": "POCO X3 Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2021-03",
+    "security_support": true
+  },
+  {
+    "codename": "earth",
+    "name": "Redmi 12C",
+    "vendor_id": "xiaomi",
+    "release_date": "2023-01",
+    "security_support": true
+  },
+  {
+    "codename": "Mi8937",
+    "name": "Redmi 3S",
+    "vendor_id": "xiaomi",
+    "release_date": "2017-08-21",
+    "security_support": true
+  },
+  {
+    "codename": "Mi8917",
+    "name": "Redmi 4A",
+    "vendor_id": "xiaomi",
+    "release_date": "2017-08-21",
+    "security_support": true
+  },
+  {
+    "codename": "Mi439",
+    "name": "Redmi 7A",
+    "vendor_id": "xiaomi",
+    "release_date": "2019-10",
+    "security_support": true
+  },
+  {
+    "codename": "socrates",
+    "name": "Redmi K60 Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2022-12-27",
+    "security_support": true
+  },
+  {
+    "codename": "sweet",
+    "name": "Redmi Note 10 Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2021-03",
+    "security_support": true
+  },
+  {
+    "codename": "rosemary",
+    "name": "Redmi Note 10S",
+    "vendor_id": "xiaomi",
+    "release_date": "2022-09",
+    "security_support": true
+  },
+  {
+    "codename": "garnet",
+    "name": "Redmi Note 13 Pro 5G",
+    "vendor_id": "xiaomi",
+    "release_date": "2024-01",
+    "security_support": true
+  },
+  {
+    "codename": "violet",
+    "name": "Redmi Note 7 Pro",
+    "vendor_id": "xiaomi",
+    "release_date": "2019-03-13",
+    "security_support": true
+  },
+  {
+    "codename": "ginkgo",
+    "name": "Redmi Note 8",
+    "vendor_id": "xiaomi",
+    "release_date": "2019-11",
+    "security_support": true
+  },
+  {
+    "codename": "akershus",
+    "name": "Axon 9 Pro",
+    "vendor_id": "zte",
+    "release_date": "2018-11",
+    "security_support": true
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "asus": {
+    "id": "asus",
+    "name": "ASUS"
+  },
+  "essential": {
+    "id": "essential",
+    "name": "Essential"
+  },
+  "f-x-tec": {
+    "id": "f-x-tec",
+    "name": "F(x)tec"
+  },
+  "fairphone": {
+    "id": "fairphone",
+    "name": "Fairphone"
+  },
+  "google": {
+    "id": "google",
+    "name": "Google"
+  },
+  "lenovo": {
+    "id": "lenovo",
+    "name": "Lenovo"
+  },
+  "lg": {
+    "id": "lg",
+    "name": "LG"
+  },
+  "motorola": {
+    "id": "motorola",
+    "name": "Motorola"
+  },
+  "nokia": {
+    "id": "nokia",
+    "name": "Nokia"
+  },
+  "nothing": {
+    "id": "nothing",
+    "name": "Nothing"
+  },
+  "nubia": {
+    "id": "nubia",
+    "name": "Nubia"
+  },
+  "oneplus": {
+    "id": "oneplus",
+    "name": "OnePlus"
+  },
+  "razer": {
+    "id": "razer",
+    "name": "Razer"
+  },
+  "realme": {
+    "id": "realme",
+    "name": "Realme"
+  },
+  "samsung": {
+    "id": "samsung",
+    "name": "Samsung"
+  },
+  "shift": {
+    "id": "shift",
+    "name": "SHIFT"
+  },
+  "solana": {
+    "id": "solana",
+    "name": "Solana"
+  },
+  "sony": {
+    "id": "sony",
+    "name": "Sony"
+  },
+  "vsmart": {
+    "id": "vsmart",
+    "name": "Vsmart"
+  },
+  "xiaomi": {
+    "id": "xiaomi",
+    "name": "Xiaomi"
+  },
+  "zte": {
+    "id": "zte",
+    "name": "ZTE"
+  }
+}
