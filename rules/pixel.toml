@@ -27,9 +27,19 @@ class = "yes"
 conclusion = "Yes"
 reference = "https://grapheneos.org/faq#supported-devices"
 
+# No GrapheneOS support, but still fine
+[[rule]]
+devices = [
+  "stallion", # Pixel 10a
+]
+categories = ["secure-boot", "hardware-keystore", "bfu-secure", "afu-secure"]
+class = "yes"
+conclusion = "Yes"
+
 # Titan M2 hardware keystore
 [[rule]]
 devices = [
+  "stallion", # Pixel 10a
   "rango", # Pixel 10 Pro Fold
   "mustang", # Pixel 10 Pro XL
   "blazer", # Pixel 10 Pro

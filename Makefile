@@ -1,12 +1,13 @@
 all:
 	cargo run --release -- build build \
 		--vendors data/android-vendors.json \
-		--devices data/android.json \
+		--devices data/android-lineage.json \
+		--devices data/android-extra.json \
 		--vendors data/iphone-vendors.json \
 		--devices data/iphone.json
 
 fetch:
-	cargo run --release -- fetch-lineage --devices data/android.json --vendors data/android-vendors.json
+	cargo run --release -- fetch-lineage --devices data/android-lineage.json --vendors data/android-vendors.json
 	cargo run --release -- fetch-iphone --devices data/iphone.json
 	cargo run --release -- fetch-knox data/android.json --rules rules/knox.toml
 
